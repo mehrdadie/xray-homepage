@@ -582,7 +582,7 @@ export default function Home() {
                 <ul className="mt-4 space-y-2">
                   {group.links.map((link) => (
                     <li key={link}>
-                      <Link href="#" className="font-body text-sm text-gray-400 hover:text-white">
+                      <Link href="#" className="font-body text-base font-normal tracking-[-0.5px] leading-[24px] text-gray-400 hover:text-white">
                         {link}
                       </Link>
                     </li>
