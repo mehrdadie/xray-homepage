@@ -12,10 +12,10 @@ const navLinks = [
 ];
 
 const stats = [
-  { value: "250+", label: "Orgs Served" },
-  { value: "100,000+", label: "Hours Saved" },
-  { value: "50x", label: "Highest Client ROI" },
-  { value: "1,550+", label: "Workflows Delivered" },
+  { value: "12 Weeks", label: "Avg. Time To Value" },
+  { value: "<6 Weeks", label: "Avg. First Deployment" },
+  { value: "82%", label: "Avg. Manual Task Reduction" },
+  { value: "2.5x", label: "Faster Team Output" },
 ];
 
 const testimonials = [
@@ -303,7 +303,7 @@ export default function Home() {
                 Obsessed with outcomes, not apps
               </h2>
               <p className="mt-4 max-w-xl font-body text-lg text-slate">
-                We're experts in best-in-class AI and automation tools serving small and enterprise teams alike.
+                We're experts in best-in-class AI and automation tools serving small and enterprise teams alike. We adopt and stress test emerging tools to keep you on the cutting edge, helping you win the next decade.
               </p>
 
               <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -311,6 +311,14 @@ export default function Home() {
                   <div key={stat.label} className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
                     <div className="font-display text-xl font-bold text-navy">{stat.value}</div>
                     <div className="mt-1 font-body text-xs text-slate">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-6 opacity-60">
+                {["asana", "censor", "Microsoft", "miro", "zendesk", "Jotform", "n8n", "Typeform", "stripe", "Search", "+ many more"].map((logo) => (
+                  <div key={logo} className="font-body text-sm font-semibold text-slate">
+                    {logo}
                   </div>
                 ))}
               </div>
@@ -333,9 +341,11 @@ export default function Home() {
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <div>
+            <div className="flex items-center gap-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-navy">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
               <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Client stories.</h2>
-              <p className="mt-1 font-body text-sm text-slate">Real results from Businesses we've transformed.</p>
             </div>
             <Link href="/case-studies" className="font-body text-sm font-semibold text-action hover:text-action/80">
               View All Case Studies
