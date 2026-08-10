@@ -248,7 +248,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute left-[18%] -top-10 h-28 w-28 opacity-90" viewBox="0 0 100 100">
+          <svg className="absolute left-[22%] -top-8 h-24 w-24 opacity-90" viewBox="0 0 100 100">
             <defs>
               <pattern id="stripes" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
                 <line x1="0" y1="0" x2="0" y2="6" stroke="#fb923c" strokeWidth="3" />
@@ -256,7 +256,7 @@ export default function Home() {
             </defs>
             <circle cx="50" cy="50" r="48" fill="url(#stripes)" />
           </svg>
-          <svg className="absolute left-[56%] top-[20%] h-40 w-40 opacity-90" viewBox="0 0 100 100">
+          <svg className="absolute left-[55%] top-[16%] h-36 w-36 opacity-90" viewBox="0 0 100 100">
             <defs>
               <pattern id="dots" patternUnits="userSpaceOnUse" width="5" height="5">
                 <circle cx="2.5" cy="2.5" r="1" fill="#0e1c2d" />
@@ -264,47 +264,33 @@ export default function Home() {
             </defs>
             <circle cx="50" cy="50" r="48" fill="url(#dots)" />
           </svg>
-          <span className="absolute left-[10%] top-[34%] h-1.5 w-1.5 rounded-full bg-navy" />
-          <span className="absolute left-[46%] bottom-[26%] h-1.5 w-1.5 rounded-full bg-navy" />
-          <span className="absolute right-[8%] bottom-[14%] h-1.5 w-1.5 rounded-full bg-navy" />
+          <span className="absolute left-[16%] top-[30%] h-1.5 w-1.5 rounded-full bg-navy" />
+          <span className="absolute left-[44%] bottom-[22%] h-1.5 w-1.5 rounded-full bg-navy" />
+          <span className="absolute right-[10%] bottom-[16%] h-1.5 w-1.5 rounded-full bg-navy" />
         </div>
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="font-display text-5xl font-semibold tracking-tight text-navy sm:text-6xl">
               Do your workflows work?
             </h1>
-            <p className="mt-6 font-body text-center text-lg leading-8 text-slate">
+            <p className="mt-6 text-center text-lg leading-8 text-slate">
               We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what’s slowing you down, and fix it once and for all. That’s our promise.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="https://calendly.com/xray/15min"
-                className="rounded-full bg-action px-6 py-3 font-body text-sm font-semibold text-white hover:bg-action/90"
+                className="rounded-full bg-action px-6 py-3 text-sm font-semibold text-white hover:bg-action/90"
               >
                 Talk With Us
               </Link>
               <Link
                 href="/assessment"
-                className="rounded-full border border-border px-6 py-3 font-body text-sm font-semibold text-navy hover:bg-navy hover:text-white"
+                className="rounded-full border border-border px-6 py-3 text-sm font-semibold text-navy hover:bg-navy hover:text-white"
               >
                 Free Workflow Assessment
               </Link>
             </div>
           </div>
-        </div>
-        <div className="pointer-events-none absolute right-8 top-20 hidden lg:block">
-          <svg viewBox="0 0 240 220" className="w-64 h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="120" cy="110" r="100" fill="#b9d6f0" />
-            <rect x="60" y="60" width="120" height="80" rx="12" fill="#0e1c2d" />
-            <rect x="80" y="80" width="80" height="8" rx="4" fill="#374151" />
-            <rect x="80" y="100" width="60" height="8" rx="4" fill="#4B5563" />
-            <path d="M90 140 L110 120 L130 130 L150 100 L170 115" stroke="#1566b9" strokeWidth="3" fill="none" />
-            <circle cx="90" cy="140" r="4" fill="#1566b9" />
-            <circle cx="110" cy="120" r="4" fill="#1566b9" />
-            <circle cx="130" cy="130" r="4" fill="#1566b9" />
-            <circle cx="150" cy="100" r="4" fill="#1566b9" />
-            <circle cx="170" cy="115" r="4" fill="#1566b9" />
-          </svg>
         </div>
       </section>
 
