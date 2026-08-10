@@ -277,15 +277,17 @@ export default function Home() {
               We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what’s slowing you down, and fix it once and for all. That’s our promise.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="https://calendly.com/xray/15min"
-                className="inline-block rounded-lg bg-action px-6 py-4 font-display text-base font-semibold capitalize text-white hover:bg-action/90"
+              <button
+                type="button"
+                className="inline-block rounded-lg bg-action px-[24px] py-[16px] font-display text-base font-semibold capitalize text-white hover:bg-action/90"
+                style={{ fontFamily: '"new-order", sans-serif', fontSize: '16px', fontWeight: 600, letterSpacing: 'normal', color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(21, 102, 185)', borderRadius: '8px', padding: '16px 24px', border: '0px none rgb(255, 255, 255)', textTransform: 'capitalize', display: 'inline-block', margin: '0px' }}
               >
                 Talk With Us
-              </Link>
+              </button>
               <Link
                 href="/assessment"
-                className="block rounded-lg bg-transparent px-6 py-4 font-display text-base font-semibold capitalize text-action hover:bg-navy hover:text-white"
+                className="block rounded-lg bg-transparent px-[24px] py-[16px] font-display text-base font-semibold capitalize text-action hover:bg-navy hover:text-white"
+                style={{ fontFamily: '"new-order", sans-serif', fontSize: '16px', fontWeight: 600, letterSpacing: 'normal', color: 'rgb(21, 102, 185)', backgroundColor: 'rgba(255, 255, 255, 0)', borderRadius: '8px', padding: '16px 24px', border: '0px none rgb(21, 102, 185)', textTransform: 'capitalize', display: 'block', margin: '0px' }}
               >
                 Free Workflow Assessment
               </Link>
