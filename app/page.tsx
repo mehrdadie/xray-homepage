@@ -523,7 +523,7 @@ export default function Home() {
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Blog</h2>
+            <h2 className="font-display text-[40px] leading-[48px] tracking-[-1px] font-bold text-navy">Blog</h2>
             <Link href="/blog" className="font-body text-sm font-semibold text-action hover:text-action/80">
               View All Articles
             </Link>
@@ -540,9 +540,9 @@ export default function Home() {
                   className="w-full rounded-2xl"
                 />
                 <div className="p-4">
-                  <h3 className="font-display text-lg font-semibold leading-snug text-navy">{post.title}</h3>
+                  <h3 className="font-display text-[24px] leading-[32px] tracking-[-0.5px] font-bold text-navy">{post.title}</h3>
                   <div className="mt-4">
-                    <Link href={post.link} className="font-body text-sm font-semibold text-action hover:text-action/80">
+                    <Link href={post.link} className="font-body text-base font-normal tracking-[-0.5px] leading-[20px] text-action hover:text-action/80">
                       Read Article
                     </Link>
                   </div>
