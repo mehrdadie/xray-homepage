@@ -7,57 +7,51 @@ import { useState } from "react";
 const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Products", href: "/products" },
+  { label: "Workshops", href: "/workshops" },
   { label: "Resources", href: "/resources" },
   { label: "About Us", href: "/about" },
 ];
 
 const stats = [
-  { value: "12 Weeks", label: "Avg. Time To Value" },
-  { value: "<6 Weeks", label: "Avg. First Deployment" },
-  { value: "82%", label: "Avg. Manual Task Reduction" },
-  { value: "2.5x", label: "Faster Team Output" },
+  { value: "250,000+", label: "BUILDERS EDUCATED" },
+  { value: "300+", label: "FREE TUTORIALS" },
+  { value: "30+", label: "TOP 1% ENGINEERS" },
+  { value: "20+", label: "EXPERT CERTIFICATIONS" },
 ];
 
 const testimonials = [
   {
-    quote:
-      "It's becoming vitally important for businesses of all types to invest in digital transformation. It's a need now, not a luxury. XRAY understands this, and they're able to help businesses like ours scale digitally without having to change what already works.",
+    quote: "It's becoming vitally important for businesses of all types to invest in digital transformation. It's a need now, not a luxury. XRAY understands this, and they're able to help businesses like ours scale digitally without having to change what already works.",
     author: "Karan Sharma",
     role: "Managing Director",
   },
   {
-    quote:
-      "XRAY was extremely well-prepared and tailored the solution to our specific needs. They bridged the tech knowledge divide and provided extensive training and documentation.",
+    quote: "This project has been a huge win for both FMSC and our partners! Partners now have ownership of their information, reducing their confusion and the number of emails they send us with questions. Multiple departments at FMSC are now able to focus on other projects because the Portal has automated tasks that used to be manual.",
+    author: "Kelsey Deusterman",
+    role: "FMSC Partner Portal Team Lead",
+  },
+  {
+    quote: "XRAY was extremely well-prepared and tailored the solution to our specific needs. They bridged the tech knowledge divide and provided extensive training and documentation.",
     author: "Michelle",
     role: "Client",
   },
   {
-    quote:
-      "This project has been a huge win for both FMSC and our partners! Partners now have ownership of their information, reducing their confusion and the number of emails they send us with questions.",
-    author: "Kelsey",
-    role: "FMSC",
-  },
-  {
-    quote:
-      "Scaling our company has been a key strategic priority for us recently. If we want to find and keep the right people for Level, we need to make sure that their onboarding experience is great from day one.",
+    quote: "Scaling our company has been a key strategic priority for us recently. If we want to find and keep the right people for Level, we need to make sure that their onboarding experience is great from day one.",
     author: "Allyn",
     role: "Level",
   },
   {
-    quote:
-      "XRAY has given our process a consistency that we just didn't have before. With this automation, all of the information I need to prepare a new employee for onboarding is right where I need it.",
+    quote: "XRAY has given our process a consistency that we just didn't have before. With this automation, all of the information I need to prepare a new employee for onboarding is right where I need it.",
     author: "Matt",
     role: "Client",
   },
   {
-    quote:
-      "XRAY's automations make it much easier for us to manage and track our hiring process. It lets us create transparency and accountability without having to give someone the job of just constantly checking on the offers we've sent.",
+    quote: "XRAY's automations make it much easier for us to manage and track our hiring process. It lets us create transparency and accountability without having to give someone the job of just constantly checking on the offers we've sent.",
     author: "JT",
     role: "Client",
   },
   {
-    quote:
-      "This is incredible. The robots are doing so much of this work, and it's way better than we could have done it ourselves. The documentation is also amazing – we're ready to start training our staff.",
+    quote: "This is incredible. The robots are doing so much of this work, and it's way better than we could have done it ourselves. The documentation is also amazing – we're ready to start training our staff.",
     author: "Amelia",
     role: "Client",
   },
@@ -320,7 +314,7 @@ export default function Home() {
               </div>
 
               <div className="mt-8 flex flex-wrap items-center gap-6 opacity-60">
-                {["asana", "censor", "Microsoft", "miro", "zendesk", "Jotform", "n8n", "Typeform", "stripe", "Search", "+ many more"].map((logo) => (
+                {["Trello", "Notion", "Pipedream", "Airtable", "OpenAI", "Google Cloud", "Oracle", "Zapier", "Softr"].map((logo) => (
                   <div key={logo} className="font-body text-sm font-semibold text-slate">
                     {logo}
                   </div>
