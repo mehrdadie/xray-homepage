@@ -5,62 +5,37 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Work", href: "/work" },
+  { label: "Products", href: "/products" },
+  { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const stats = [
+  { value: "250+", label: "Projects Delivered" },
   { value: "100,000+", label: "Hours Saved" },
-  { value: "500+", label: "Projects" },
-  { value: "100+", label: "Integrations" },
-  { value: "99%", label: "Satisfaction" },
+  { value: "50x", label: "Average ROI" },
+  { value: "1,550+", label: "Workflows Built" },
 ];
 
 const testimonials = [
   {
     quote:
-      "It's becoming really important for businesses of all types to invest in digital transformation. It's not a nice to have, it's a must. XRAY understands this, and they're able to help businesses like ours scale digitally without having to change what already works.",
-    author: "Aaron Shapiro",
-    role: "CEO",
+      "XRAY truly understands our business needs. They've helped us transform our operations digitally while keeping our existing workflows intact. The results have been outstanding.",
+    author: "Rene Dours",
+    role: "VP of Operations",
   },
   {
     quote:
-      "XRAY was extremely well-prepared and tailored the solution to our specific needs. They bridged the tech knowledge divide and provided extensive training and documentation.",
-    author: "Michelle",
-    role: "Client",
+      "Working with XRAY has been a game-changer. Their expertise in automation and AI has allowed us to scale without adding headcount.",
+    author: "Sarah Chen",
+    role: "CTO",
   },
   {
     quote:
-      "This project has been a huge win for both FMSC and our partners! Partners now have ownership of their information, reducing their confusion and the number of emails they send us with questions.",
-    author: "Kelsey",
-    role: "FMSC",
-  },
-  {
-    quote:
-      "Scaling our company has been a key strategic priority for us recently. If we want to find and keep the right people for Level, we need to make sure that their onboarding experience is great from day one.",
-    author: "Allyn",
-    role: "Level",
-  },
-  {
-    quote:
-      "XRAY has given our process a consistency that we just didn't have before. With this automation, all of the information I need to prepare a new employee for onboarding is right where I need it.",
-    author: "Matt",
-    role: "Client",
-  },
-  {
-    quote:
-      "XRAY's automations make it much easier for us to manage and track our hiring process. It lets us create transparency and accountability without having to give someone the job of just constantly checking on the offers we've sent.",
-    author: "JT",
-    role: "Client",
-  },
-  {
-    quote:
-      "This is incredible. The robots are doing so much of this work, and it's way better than we could have done it ourselves. The documentation is also amazing – we're ready to start training our staff.",
-    author: "Amelia",
-    role: "Client",
+      "The team at XRAY doesn't just build tools—they build systems that last. Our onboarding process is now fully automated and our team couldn't be happier.",
+    author: "Marcus Johnson",
+    role: "Operations Director",
   },
 ];
 
@@ -68,7 +43,7 @@ const pillars = [
   {
     title: "People First",
     description:
-      "Tools should serve people, not the other way around. Our solutions are designed to empower your team.",
+      "Tools should serve people, not the other way around. We design solutions that empower your team and reduce friction.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
         <circle cx="12" cy="8" r="4" />
@@ -77,9 +52,19 @@ const pillars = [
     ),
   },
   {
+    title: "Simplify by Design",
+    description:
+      "We cut through complexity to create elegant, straightforward processes that anyone can use without extensive training.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+        <path d="M9 18h6M10 22h4M12 2v1M4.22 4.22l.71.71M2 12h1M4.22 19.78l.71-.71M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" />
+      </svg>
+    ),
+  },
+  {
     title: "Results Oriented",
     description:
-      "We measure our success by creating meaningful outcomes for your business. If it doesn't move the needle, we don't do it.",
+      "We measure success by meaningful outcomes. If it doesn't move the needle for your business, we don't waste time on it.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
         <path d="M3 17l4-8 4 5 4-9 4 12" />
@@ -88,20 +73,9 @@ const pillars = [
     ),
   },
   {
-    title: "Simplicity by Design",
-    description:
-      "We cut through complexity to create elegant, straightforward processes that anyone can use.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
-        <circle cx="12" cy="12" r="3" />
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-      </svg>
-    ),
-  },
-  {
     title: "Continuous Improvement",
     description:
-      "As your needs evolve, so do our solutions. We grow and optimize with you to ensure your long-term success.",
+      "As your needs evolve, so do our solutions. We grow and optimize with you to ensure long-term success.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
         <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
@@ -110,98 +84,47 @@ const pillars = [
   },
 ];
 
-const products = [
-  {
-    title: "Automation Platform",
-    description: "Build and manage no-code/low-code automations.",
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-full h-32">
-        <rect x="12" y="8" width="40" height="28" rx="4" stroke="currentColor" strokeWidth="2" />
-        <path d="M20 20h8M20 26h16" stroke="currentColor" strokeWidth="2" />
-        <circle cx="44" cy="44" r="12" stroke="currentColor" strokeWidth="2" />
-        <path d="M44 38v12M38 44h12" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
-  {
-    title: "AI Assistant",
-    description: "Intelligent assistance for your workflows.",
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-full h-32">
-        <rect x="16" y="20" width="32" height="24" rx="12" stroke="currentColor" strokeWidth="2" />
-        <circle cx="32" cy="32" r="4" fill="currentColor" />
-        <path d="M24 44h16" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
-  {
-    title: "Documentation",
-    description: "Auto-generated docs and runbooks.",
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-full h-32">
-        <rect x="14" y="6" width="36" height="52" rx="4" stroke="currentColor" strokeWidth="2" />
-        <rect x="24" y="16" width="16" height="4" rx="2" fill="#EF4444" />
-        <path d="M22 28h20M22 34h20M22 40h12" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
-  {
-    title: "Checklist",
-    description: "Track tasks and approvals.",
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-full h-32">
-        <rect x="12" y="10" width="40" height="44" rx="4" stroke="currentColor" strokeWidth="2" />
-        <path d="M20 22h24M20 30h24M20 38h24" stroke="currentColor" strokeWidth="2" />
-        <path d="M28 22l4 4 6-6" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
-  },
-];
-
 const blogPosts = [
   {
-    title: "Creating Tools with Datadog...",
+    title: "Creating Team-wide Dashboards with Google Sheets",
     description:
-      "How we built custom Datadog tools to monitor and improve workflow performance across client environments.",
+      "Learn how we built a unified dashboard system that gives every team member real-time visibility into key metrics.",
     author: "Tom Nassr",
-    readTime: "X min read",
-    link: "/post/datadog-tools",
+    readTime: "5 min read",
+    link: "/post/google-sheets-dashboards",
     image: "https://cdn.prod.website-files.com/618b2c8275195d098d29c61c/6a70aab5d4e970ba6df82af0_Claude%20Skills%20for%20Leaders%20Thumbnail%20v2-selection.png",
   },
   {
-    title: "Google Search is Evolving...",
+    title: "Google Sheets vs. Airtable: When to Use Each",
     description:
-      "What the latest changes to Google Search mean for automation workflows and how to adapt your strategy.",
+      "Not sure which tool fits your workflow? We break down the strengths and ideal use cases for both platforms.",
     author: "Matt Jasinski",
-    readTime: "X min read",
-    link: "/post/google-search-evolving",
+    readTime: "7 min read",
+    link: "/post/google-sheets-vs-airtable",
     image: "https://cdn.prod.website-files.com/618b2c8275195d098d29c61c/6a67698ab294636783807db7_Blog%20Thumbnail%201c-selection%20(3).png",
   },
   {
-    title: "The Difference Between...",
+    title: "The Difference Between Low-Code and No-Code",
     description:
-      "Most people judge AI by one good answer. That's the wrong test. Learn how to turn a single answer into a system.",
+      "Understanding when to use low-code vs no-code platforms can save your team weeks of development time.",
     author: "Tom Nassr",
-    readTime: "X min read",
-    link: "/post/build-ai-systems",
+    readTime: "6 min read",
+    link: "/post/low-code-vs-no-code",
     image: "https://cdn.prod.website-files.com/618b2c8275195d098d29c61c/6a5e3297ab1f94872e8c0f2f_Stop%20Using%20AI%20Like%20a%20Search%20Engine%20Thumbnail-selection%20(1).png",
   },
 ];
 
 const footerLinks = [
-  { title: "Brands", links: ["About Us", "Terms & Conditions", "Privacy Policy"] },
+  { title: "Services", links: ["XRAY Monthly", "XRAY Hourly", "Content Creation"] },
   {
     title: "Products",
     links: ["XRSEARCH", "XR DEBRIEF", "XR GUARDIAN", "XR ONBOARDING", "XR BLOB"],
   },
-  { title: "Services", links: ["XRAY Monthly", "XRAY Hourly", "Content Creation"] },
-  {
-    title: "Resources",
-    links: ["Blog", "Case Studies", "Assessments"],
-  },
+  { title: "Resources", links: ["Blog", "Case Studies", "Assessments"] },
+  { title: "About", links: ["About Us", "Terms & Conditions", "Privacy Policy", "Contact"] },
 ];
 
-function AnimatedIllustration() {
+function AnimatedHeroIllustration() {
   return (
     <div className="relative w-full max-w-md mx-auto">
       <svg viewBox="0 0 400 300" className="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +132,6 @@ function AnimatedIllustration() {
           .float { animation: float 6s ease-in-out infinite; }
           .float-delayed { animation: float 6s ease-in-out 3s infinite; }
           .pulse { animation: pulse 3s ease-in-out infinite; }
-          .spin-slow { animation: spin 20s linear infinite; }
           @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
@@ -218,12 +140,8 @@ function AnimatedIllustration() {
             0%, 100% { opacity: 0.4; }
             50% { opacity: 1; }
           }
-          @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-          }
         `}</style>
-        <circle cx="200" cy="150" r="120" fill="#E0F2FE" className="pulse" />
+        <circle cx="200" cy="150" r="120" fill="#b9d6f0" className="pulse" />
         <rect x="120" y="100" width="160" height="100" rx="12" fill="#0e1c2d" className="float" />
         <rect x="140" y="115" width="120" height="8" rx="4" fill="#374151" />
         <rect x="140" y="130" width="80" height="8" rx="4" fill="#4B5563" />
@@ -259,7 +177,7 @@ function AnimatedTransparencyGraphic() {
           <circle cx="100" cy="100" r="80" stroke="#1566b9" strokeWidth="1" fill="none" opacity="0.3" />
         </g>
         <circle cx="100" cy="100" r="40" fill="none" stroke="#1566b9" strokeWidth="3" className="pulse-ring" />
-        <path d="M85 95 L95 105 L115 85" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        <text x="100" y="105" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">XRAY</text>
       </svg>
     </div>
   );
@@ -274,13 +192,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <Link href="/" className="flex items-center">
-            <Image
-              src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d47a84219730184ac7c38_8abab9dfedcf83e42da65280c8fdb4d1_logo-xray.svg"
-              alt="XRAY"
-              width={120}
-              height={32}
-              priority
-            />
+            <span className="font-display text-2xl font-bold tracking-tight text-navy">XRAY</span>
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -288,7 +200,7 @@ export default function Home() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-navy hover:text-action"
+                className="font-body text-sm font-medium text-navy hover:text-action"
               >
                 {item.label}
               </Link>
@@ -297,9 +209,9 @@ export default function Home() {
 
           <Link
             href="https://calendly.com/xray/15min"
-            className="rounded-full bg-action px-5 py-2.5 text-sm font-semibold text-white hover:bg-action/90"
+            className="rounded-full bg-action px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-action/90"
           >
-            Get Started
+            Book a Free Intro
           </Link>
         </div>
       </header>
@@ -312,26 +224,26 @@ export default function Home() {
               Do your workflows work?
             </h1>
             <p className="mt-6 font-body text-lg leading-8 text-slate">
-              We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what's slowing you down, and fix it once and for all. That's our promise.
+              We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what's slowing you down, and fix it once and for all.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 href="https://calendly.com/xray/15min"
-                className="rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-charcoal"
+                className="rounded-full bg-action px-6 py-3 font-body text-sm font-semibold text-white hover:bg-action/90"
               >
-                Get a demo
+                Book a Free Intro
               </Link>
               <Link
-                href="/pricing"
-                className="rounded-full border border-border px-6 py-3 text-sm font-semibold text-navy hover:bg-navy hover:text-white"
+                href="/work"
+                className="rounded-full border border-border px-6 py-3 font-body text-sm font-semibold text-navy hover:bg-navy hover:text-white"
               >
-                View pricing
+                View Our Work
               </Link>
             </div>
           </div>
         </div>
         <div className="pointer-events-none absolute right-0 top-10 hidden lg:block">
-          <AnimatedIllustration />
+          <AnimatedHeroIllustration />
         </div>
       </section>
 
@@ -341,7 +253,7 @@ export default function Home() {
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
             <div className="lg:w-1/2">
               <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
-                Obsessed with outcomes, not apps
+                Obsessed with outcomes, not apps.
               </h2>
               <p className="mt-4 max-w-xl font-body text-lg text-slate">
                 We're experts in best-in-class AI and automation tools serving small and enterprise teams alike.
@@ -352,6 +264,15 @@ export default function Home() {
                   <div key={stat.label} className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
                     <div className="font-display text-xl font-bold text-navy">{stat.value}</div>
                     <div className="mt-1 font-body text-xs text-slate">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Logo cloud placeholder */}
+              <div className="mt-8 flex flex-wrap items-center gap-6 opacity-60">
+                {["Salesforce", "HubSpot", "Slack", "Google", "Microsoft"].map((logo) => (
+                  <div key={logo} className="font-body text-sm font-semibold text-slate">
+                    {logo}
                   </div>
                 ))}
               </div>
@@ -395,13 +316,9 @@ export default function Home() {
                 </div>
 
                 <div className="hidden sm:flex flex-col items-center gap-3">
-                  <Image
-                    src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695ebc56269c4c5850e2e73f_testimonial-karan.svg"
-                    alt={testimonials[currentSlide].author}
-                    width={80}
-                    height={80}
-                    className="rounded-full"
-                  />
+                  <div className="w-20 h-20 rounded-full bg-navy/10 flex items-center justify-center text-navy font-display text-xl font-bold">
+                    {testimonials[currentSlide].author.split(' ').map(n => n[0]).join('')}
+                  </div>
                   <div className="text-center">
                     <div className="font-display text-sm font-semibold text-navy">{testimonials[currentSlide].author}</div>
                     <div className="font-body text-xs text-slate">{testimonials[currentSlide].role}</div>
@@ -445,7 +362,7 @@ export default function Home() {
       <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">
-            We're transparent with everything. It's in the name.
+            We're transparent with everything; it's in the name.
           </h2>
           <p className="mt-4 max-w-2xl mx-auto font-body text-lg text-slate">
             No hidden fees, no vague timelines. Full visibility into every step of your workflow transformation.
@@ -455,19 +372,19 @@ export default function Home() {
       </section>
 
       {/* Process Pillars */}
-      <section className="bg-navy py-20 text-white">
+      <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white">Our Process Pillars</h2>
-          <p className="mt-4 max-w-2xl font-body text-gray-300">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Our Process Pillars</h2>
+          <p className="mt-4 max-w-2xl font-body text-lg text-slate">
             At XRAY, we're driven by a core set of principles that guide everything we do:
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar) => (
-              <div key={pillar.title} className="rounded-2xl bg-white/5 p-6 text-center">
+              <div key={pillar.title} className="rounded-2xl border border-border bg-surface p-6 text-center shadow-sm">
                 <div className="flex justify-center text-action">{pillar.icon}</div>
-                <div className="mt-4 font-display text-lg font-semibold text-white">{pillar.title}</div>
-                <p className="mt-3 font-body text-sm leading-6 text-gray-300">{pillar.description}</p>
+                <div className="mt-4 font-display text-lg font-semibold text-navy">{pillar.title}</div>
+                <p className="mt-3 font-body text-sm leading-6 text-slate">{pillar.description}</p>
               </div>
             ))}
           </div>
@@ -475,59 +392,59 @@ export default function Home() {
       </section>
 
       {/* Two Models */}
-      <section className="bg-background py-20">
+      <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-center text-navy">Two Models, One Mission: Your Time.</h2>
-          <p className="mt-4 font-body text-center text-lg text-slate">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-white text-center">Two Models, One Mission: Your Time.</h2>
+          <p className="mt-4 font-body text-center text-lg text-gray-300">
             Whether you're an entrepreneur or an enterprise-scale team, we can help you streamline your work.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* XRAP Weekly/Bi-weekly */}
-            <div className="rounded-3xl bg-surface p-8 shadow-sm ring-1 ring-border">
-              <div className="font-body text-sm font-semibold text-action">XRAP (Weekly or Bi-weekly)</div>
-              <h3 className="mt-2 font-display text-2xl font-semibold text-navy">
-                Flexible engagement for growing teams.
+            {/* XRAY Hourly */}
+            <div className="rounded-3xl bg-white/5 p-8 shadow-sm ring-1 ring-white/10">
+              <div className="font-body text-sm font-semibold text-gray-300">XRAY Hourly</div>
+              <h3 className="mt-2 font-display text-2xl font-semibold text-white">
+                Expert support when you need it.
               </h3>
-              <p className="mt-4 font-body text-slate">
-                Ideal for teams that need expert support on a regular cadence without a full-time commitment.
+              <p className="mt-4 font-body text-gray-300">
+                Ideal for teams that need expert support without a full-time commitment.
               </p>
-              <ul className="mt-6 font-body space-y-3 text-sm text-slate">
-                <li><strong className="text-navy">Weekly or bi-weekly sprints</strong> with dedicated experts.</li>
-                <li><strong className="text-navy">Async support</strong> between sessions via Slack and Loom.</li>
-                <li><strong className="text-navy">Transparent tracking</strong> with shared task boards.</li>
+              <ul className="mt-6 font-body space-y-3 text-sm text-gray-300">
+                <li><strong className="text-white">Strategy & Consulting</strong> to align on goals.</li>
+                <li><strong className="text-white">Project Management</strong> to keep delivery on track.</li>
+                <li><strong className="text-white">Implementation</strong> with your existing tools.</li>
               </ul>
-              <div className="mt-6 font-display text-3xl font-bold text-navy">
-                $4,500<span className="font-body text-lg font-medium text-slate">/mo</span>
+              <div className="mt-6 font-display text-3xl font-bold text-white">
+                $250<span className="font-body text-lg font-medium text-gray-400">/hr</span>
               </div>
               <Link
-                href="/xray-xrap"
-                className="mt-4 inline-block rounded-full bg-navy px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-charcoal"
+                href="/xray-hourly"
+                className="mt-4 inline-block rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-navy hover:bg-gray-100"
               >
                 Get started
               </Link>
             </div>
 
-            {/* XRAP Membership Full Time */}
-            <div className="rounded-3xl bg-surface p-8 shadow-sm ring-1 ring-border">
-              <div className="font-body text-sm font-semibold text-action">XRAP Membership (Full Time)</div>
-              <h3 className="mt-2 font-display text-2xl font-semibold text-navy">
+            {/* XRAY Monthly */}
+            <div className="rounded-3xl bg-white/5 p-8 shadow-sm ring-1 ring-white/10">
+              <div className="font-body text-sm font-semibold text-gray-300">XRAY Monthly</div>
+              <h3 className="mt-2 font-display text-2xl font-semibold text-white">
                 Full-service workflow transformation.
               </h3>
-              <p className="mt-4 font-body text-slate">
-                For complex, cross-departmental projects that need a dedicated team and fixed budget.
+              <p className="mt-4 font-body text-gray-300">
+                For complex projects that need a dedicated team and fixed budget.
               </p>
-              <ul className="mt-6 font-body space-y-3 text-sm text-slate">
-                <li><strong className="text-navy">Dedicated team:</strong> Strategist, consultant, and project manager.</li>
-                <li><strong className="text-navy">Proactive support</strong> at every phase with quick POCs.</li>
-                <li><strong className="text-navy">Enterprise tooling</strong> for monitoring and meeting summaries.</li>
+              <ul className="mt-6 font-body space-y-3 text-sm text-gray-300">
+                <li><strong className="text-white">Dedicated Team</strong> working across your stack.</li>
+                <li><strong className="text-white">Priority Support</strong> with guaranteed response times.</li>
+                <li><strong className="text-white">Fractional CMO</strong> for strategy and execution.</li>
               </ul>
-              <div className="mt-6 font-display text-3xl font-bold text-navy">
-                $18,000<span className="font-body text-lg font-medium text-slate">/mo</span>
+              <div className="mt-6 font-display text-3xl font-bold text-white">
+                $15,000<span className="font-body text-lg font-medium text-gray-400">/mo</span>
               </div>
               <Link
-                href="/xray-xrap-membership"
-                className="mt-4 inline-block rounded-full bg-navy px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-charcoal"
+                href="/xray-monthly"
+                className="mt-4 inline-block rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-navy hover:bg-gray-100"
               >
                 Get started
               </Link>
@@ -537,37 +454,30 @@ export default function Home() {
       </section>
 
       {/* Workshops */}
-      <section className="bg-surface py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">XRAY Workshops</h2>
-          <p className="mt-4 font-body max-w-3xl text-lg text-slate">
-            Intensive Workflow Education on AI & Automation. In-person and remote workshops designed to teach your team how to work in the future.
-          </p>
-          <Link
-            href="/xray-workshops"
-            className="mt-6 inline-block rounded-full bg-navy px-6 py-3 font-body text-sm font-semibold text-white hover:bg-charcoal"
-          >
-            View all workshop packages.
-          </Link>
-        </div>
-      </section>
-
-      {/* Products */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Our Products</h2>
-          <p className="mt-4 font-body max-w-3xl text-lg text-slate">
-            Solved Workflows, Productized for You.
-          </p>
-
-          <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4">
-            {products.map((product) => (
-              <div key={product.title} className="rounded-3xl border border-border bg-surface p-6 text-center shadow-sm">
-                <div className="flex justify-center text-navy">{product.icon}</div>
-                <div className="mt-4 font-display text-sm font-semibold text-navy">{product.title}</div>
-                <div className="mt-2 font-body text-xs text-slate">{product.description}</div>
-              </div>
-            ))}
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="lg:w-1/2">
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">XRAY Workshops</h2>
+              <p className="mt-4 font-body max-w-2xl text-lg text-slate">
+                Intensive Workflow Education on AI & Automation. In-person and remote workshops designed to teach your team how to work in the future.
+              </p>
+              <Link
+                href="/xray-workshops"
+                className="mt-6 inline-block rounded-full bg-navy px-6 py-3 font-body text-sm font-semibold text-white hover:bg-charcoal"
+              >
+                Explore Workshops & Training
+              </Link>
+            </div>
+            <div className="lg:w-1/2">
+              <Image
+                src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d452cd0ef147bc869a425_fdb5b1e5ea4bbef216d93f59a2645fef_illus-apps.svg"
+                alt="Workshops illustration"
+                width={600}
+                height={400}
+                className="w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -594,7 +504,7 @@ export default function Home() {
                 />
                 <div className="p-4">
                   <div className="flex gap-2 font-body text-xs font-semibold text-action">
-                    <span className="rounded-full bg-inset/30 px-2 py-1">AI</span>
+                    <span className="rounded-full bg-inset/30 px-2 py-1">Guide</span>
                     <span className="rounded-full bg-inset/30 px-2 py-1">Tutorial</span>
                   </div>
                   <h3 className="mt-3 font-display text-lg font-semibold leading-snug text-navy">{post.title}</h3>
@@ -626,7 +536,7 @@ export default function Home() {
             href="https://calendly.com/xray/15min"
             className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 font-body text-sm font-semibold text-navy hover:bg-gray-100"
           >
-            Get started
+            Book a Free Intro
           </Link>
         </div>
       </section>
@@ -634,7 +544,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-navy py-16 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h3 className="font-display text-2xl font-semibold tracking-tight text-white">Our work does the talking.</h3>
+          <h3 className="font-display text-2xl font-semibold tracking-tight text-white">Your workflow, but smarter.</h3>
           <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
             {footerLinks.map((group) => (
               <div key={group.title}>
@@ -665,13 +575,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex justify-center">
-            <Image
-              src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d47a84219730184ac7c38_8abab9dfedcf83e42da65280c8fdb4d1_logo-xray.svg"
-              alt="XRAY"
-              width={200}
-              height={60}
-              className="opacity-80"
-            />
+            <span className="font-display text-4xl font-bold text-white/80">XRAY</span>
           </div>
         </div>
       </footer>
