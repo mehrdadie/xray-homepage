@@ -231,6 +231,7 @@ export default function Home() {
                 className="font-body text-sm font-medium text-navy hover:text-action"
               >
                 {item.label}
+                <span className="ml-1 inline-block text-xs">▾</span>
               </Link>
             ))}
           </nav>
@@ -246,15 +247,36 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <svg className="absolute -top-6 left-[28%] h-24 w-24 -translate-x-1/2 opacity-80" viewBox="0 0 100 100">
+            <defs>
+              <pattern id="stripes" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="8" stroke="#fb923c" strokeWidth="4" />
+              </pattern>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#stripes)" />
+          </svg>
+          <svg className="absolute left-[62%] top-[28%] h-24 w-24 opacity-80" viewBox="0 0 100 100">
+            <defs>
+              <pattern id="dots" patternUnits="userSpaceOnUse" width="6" height="6">
+                <circle cx="3" cy="3" r="1.2" fill="#0e1c2d" />
+              </pattern>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#dots)" />
+          </svg>
+          <span className="absolute left-[15%] top-[12%] h-1.5 w-1.5 rounded-full bg-navy" />
+          <span className="absolute right-[18%] bottom-[22%] h-1.5 w-1.5 rounded-full bg-navy" />
+          <span className="absolute left-[22%] bottom-[18%] h-1.5 w-1.5 rounded-full bg-navy" />
+        </div>
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="font-display text-5xl font-semibold tracking-tight text-navy sm:text-6xl">
               Do your workflows work?
             </h1>
-            <p className="mt-6 font-body text-lg leading-8 text-slate">
-              We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what's slowing you down, and fix it once and for all. That's our promise.
+            <p className="mt-6 font-body text-center text-lg leading-8 text-slate">
+              We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what’s slowing you down, and fix it once and for all. That’s our promise.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="https://calendly.com/xray/15min"
                 className="rounded-full bg-action px-6 py-3 font-body text-sm font-semibold text-white hover:bg-action/90"
