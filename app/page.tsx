@@ -248,25 +248,25 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute -top-6 left-[28%] h-24 w-24 -translate-x-1/2 opacity-80" viewBox="0 0 100 100">
+          <svg className="absolute left-[22%] -top-10 h-28 w-28 opacity-90" viewBox="0 0 100 100">
             <defs>
-              <pattern id="stripes" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="8" stroke="#fb923c" strokeWidth="4" />
+              <pattern id="stripes" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="6" stroke="#fb923c" strokeWidth="3" />
               </pattern>
             </defs>
             <circle cx="50" cy="50" r="48" fill="url(#stripes)" />
           </svg>
-          <svg className="absolute left-[62%] top-[28%] h-24 w-24 opacity-80" viewBox="0 0 100 100">
+          <svg className="absolute left-[60%] top-[18%] h-40 w-40 opacity-90" viewBox="0 0 100 100">
             <defs>
-              <pattern id="dots" patternUnits="userSpaceOnUse" width="6" height="6">
-                <circle cx="3" cy="3" r="1.2" fill="#0e1c2d" />
+              <pattern id="dots" patternUnits="userSpaceOnUse" width="5" height="5">
+                <circle cx="2.5" cy="2.5" r="1" fill="#0e1c2d" />
               </pattern>
             </defs>
             <circle cx="50" cy="50" r="48" fill="url(#dots)" />
           </svg>
-          <span className="absolute left-[15%] top-[12%] h-1.5 w-1.5 rounded-full bg-navy" />
-          <span className="absolute right-[18%] bottom-[22%] h-1.5 w-1.5 rounded-full bg-navy" />
-          <span className="absolute left-[22%] bottom-[18%] h-1.5 w-1.5 rounded-full bg-navy" />
+          <span className="absolute left-[18%] top-[28%] h-1.5 w-1.5 rounded-full bg-navy" />
+          <span className="absolute left-[50%] bottom-[28%] h-1.5 w-1.5 rounded-full bg-navy" />
+          <span className="absolute right-[12%] bottom-[18%] h-1.5 w-1.5 rounded-full bg-navy" />
         </div>
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-3xl">
