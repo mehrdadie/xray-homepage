@@ -1,10 +1,38 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #faf9f6;
-  --color-foreground: #111827;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #fffaf0;
+  --color-foreground: #0e1c2d;
+  --color-surface: #ffffff;
+  --color-navy: #0e1c2d;
+  --color-charcoal: #222222;
+  --color-slate: #686f76;
+  --color-action: #1566b9;
+  --color-border: #e1ded8;
+  --color-muted: #c3c2bf;
+  --color-inset: #b9d6f0;
+  --color-cream: #feefcf;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --font-display: var(--font-new-order);
+  --font-body: var(--font-mundial);
+}
+
+@font-face {
+  font-family: "new-order";
+  src: local("New Order"), local("NewOrder");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "mundial";
+  src: local("Mundial"), local("MundialRegular");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {
@@ -12,12 +40,12 @@ html {
 }
 
 body {
-  background: #faf9f6;
-  color: #111827;
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  background: #fffaf0;
+  color: #0e1c2d;
+  font-family: var(--font-mundial), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #2563eb22;
+  background: #1566b922;
 }

@@ -224,17 +224,17 @@ function AnimatedIllustration() {
           }
         `}</style>
         <circle cx="200" cy="150" r="120" fill="#E0F2FE" className="pulse" />
-        <rect x="120" y="100" width="160" height="100" rx="12" fill="#111827" className="float" />
+        <rect x="120" y="100" width="160" height="100" rx="12" fill="#0e1c2d" className="float" />
         <rect x="140" y="115" width="120" height="8" rx="4" fill="#374151" />
         <rect x="140" y="130" width="80" height="8" rx="4" fill="#4B5563" />
-        <circle cx="250" cy="180" r="20" fill="#2563EB" className="float-delayed" />
-        <path d="M100 200 L140 160 L180 190 L220 140 L260 170 L300 120" stroke="#2563EB" strokeWidth="3" fill="none" className="pulse" />
-        <circle cx="100" cy="200" r="6" fill="#2563EB" />
-        <circle cx="140" cy="160" r="6" fill="#2563EB" />
-        <circle cx="180" cy="190" r="6" fill="#2563EB" />
-        <circle cx="220" cy="140" r="6" fill="#2563EB" />
-        <circle cx="260" cy="170" r="6" fill="#2563EB" />
-        <circle cx="300" cy="120" r="6" fill="#2563EB" />
+        <circle cx="250" cy="180" r="20" fill="#1566b9" className="float-delayed" />
+        <path d="M100 200 L140 160 L180 190 L220 140 L260 170 L300 120" stroke="#1566b9" strokeWidth="3" fill="none" className="pulse" />
+        <circle cx="100" cy="200" r="6" fill="#1566b9" />
+        <circle cx="140" cy="160" r="6" fill="#1566b9" />
+        <circle cx="180" cy="190" r="6" fill="#1566b9" />
+        <circle cx="220" cy="140" r="6" fill="#1566b9" />
+        <circle cx="260" cy="170" r="6" fill="#1566b9" />
+        <circle cx="300" cy="120" r="6" fill="#1566b9" />
       </svg>
     </div>
   );
@@ -252,13 +252,13 @@ function AnimatedTransparencyGraphic() {
             100% { r: 80; opacity: 0; }
           }
         `}</style>
-        <circle cx="100" cy="100" r="60" fill="#0F172A" />
+        <circle cx="100" cy="100" r="60" fill="#0e1c2d" />
         <circle cx="100" cy="100" r="40" fill="#1E293B" />
         <g className="rotate-slow">
-          <circle cx="100" cy="100" r="70" stroke="#2563EB" strokeWidth="2" fill="none" opacity="0.5" />
-          <circle cx="100" cy="100" r="80" stroke="#2563EB" strokeWidth="1" fill="none" opacity="0.3" />
+          <circle cx="100" cy="100" r="70" stroke="#1566b9" strokeWidth="2" fill="none" opacity="0.5" />
+          <circle cx="100" cy="100" r="80" stroke="#1566b9" strokeWidth="1" fill="none" opacity="0.3" />
         </g>
-        <circle cx="100" cy="100" r="40" fill="none" stroke="#2563EB" strokeWidth="3" className="pulse-ring" />
+        <circle cx="100" cy="100" r="40" fill="none" stroke="#1566b9" strokeWidth="3" className="pulse-ring" />
         <path d="M85 95 L95 105 L115 85" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </div>
@@ -269,9 +269,9 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6]">
+    <div className="min-h-screen bg-background text-navy">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-[#FAF9F6]/90 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <Link href="/" className="flex items-center">
             <Image
@@ -288,7 +288,7 @@ export default function Home() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-[#111827] hover:text-blue-700"
+                className="text-sm font-medium text-navy hover:text-action"
               >
                 {item.label}
               </Link>
@@ -297,7 +297,7 @@ export default function Home() {
 
           <Link
             href="https://calendly.com/xray/15min"
-            className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700"
+            className="rounded-full bg-action px-5 py-2.5 text-sm font-semibold text-white hover:bg-action/90"
           >
             Get Started
           </Link>
@@ -308,22 +308,22 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-semibold tracking-tight text-[#111827] sm:text-6xl">
+            <h1 className="font-display text-5xl font-semibold tracking-tight text-navy sm:text-6xl">
               Do your workflows work?
             </h1>
-            <p className="mt-6 text-lg leading-8 text-[#374151]">
+            <p className="mt-6 font-body text-lg leading-8 text-slate">
               We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what's slowing you down, and fix it once and for all. That's our promise.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 href="https://calendly.com/xray/15min"
-                className="rounded-full bg-[#111827] px-6 py-3 text-sm font-semibold text-white hover:bg-[#000]"
+                className="rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-charcoal"
               >
                 Get a demo
               </Link>
               <Link
                 href="/pricing"
-                className="rounded-full border border-[#111827] px-6 py-3 text-sm font-semibold text-[#111827] hover:bg-[#111827] hover:text-white"
+                className="rounded-full border border-border px-6 py-3 text-sm font-semibold text-navy hover:bg-navy hover:text-white"
               >
                 View pricing
               </Link>
@@ -336,22 +336,22 @@ export default function Home() {
       </section>
 
       {/* Obsessed with outcomes */}
-      <section className="bg-[#FAF9F6] py-20">
+      <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
                 Obsessed with outcomes, not apps
               </h2>
-              <p className="mt-4 max-w-xl text-lg text-[#374151]">
+              <p className="mt-4 max-w-xl font-body text-lg text-slate">
                 We're experts in best-in-class AI and automation tools serving small and enterprise teams alike.
               </p>
 
               <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 {stats.map((stat) => (
-                  <div key={stat.label} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-                    <div className="text-xl font-bold text-[#111827]">{stat.value}</div>
-                    <div className="mt-1 text-xs text-[#374151]">{stat.label}</div>
+                  <div key={stat.label} className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
+                    <div className="font-display text-xl font-bold text-navy">{stat.value}</div>
+                    <div className="mt-1 font-body text-xs text-slate">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -371,24 +371,24 @@ export default function Home() {
       </section>
 
       {/* Client Stories */}
-      <section className="py-20">
+      <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <h2 className="text-3xl font-semibold tracking-tight">Client stories.</h2>
-            <Link href="/case-studies" className="text-sm font-semibold text-blue-700 hover:text-blue-800">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Client stories.</h2>
+            <Link href="/case-studies" className="font-body text-sm font-semibold text-action hover:text-action/80">
               View All Case Studies
             </Link>
           </div>
 
           <div className="mt-10">
-            <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-200">
+            <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-border">
               <div className="flex items-start justify-between gap-6">
                 <div className="flex-1">
-                  <blockquote className="text-xl font-medium leading-relaxed text-[#111827]">
+                  <blockquote className="font-body text-xl font-medium leading-relaxed text-navy">
                     “{testimonials[currentSlide].quote}”
                   </blockquote>
                   <div className="mt-4">
-                    <Link href="/case-studies" className="text-sm font-semibold text-blue-700 hover:text-blue-800">
+                    <Link href="/case-studies" className="font-body text-sm font-semibold text-action hover:text-action/80">
                       Read Case Study
                     </Link>
                   </div>
@@ -403,14 +403,14 @@ export default function Home() {
                     className="rounded-full"
                   />
                   <div className="text-center">
-                    <div className="font-semibold">{testimonials[currentSlide].author}</div>
-                    <div className="text-xs text-gray-500">{testimonials[currentSlide].role}</div>
+                    <div className="font-display text-sm font-semibold text-navy">{testimonials[currentSlide].author}</div>
+                    <div className="font-body text-xs text-slate">{testimonials[currentSlide].role}</div>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8 flex items-center justify-between">
-                <div className="text-xs text-gray-500">
+                <div className="font-body text-xs text-slate">
                   {currentSlide + 1} of {testimonials.length}
                 </div>
                 <div className="flex gap-3">
@@ -419,7 +419,7 @@ export default function Home() {
                     onClick={() =>
                       setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
                     }
-                    className="rounded-full border border-gray-200 px-3 py-2 text-sm hover:bg-gray-50"
+                    className="rounded-full border border-border px-3 py-2 text-sm hover:bg-cream"
                     aria-label="Previous testimonial"
                   >
                     ←
@@ -429,7 +429,7 @@ export default function Home() {
                     onClick={() =>
                       setCurrentSlide((prev) => (prev + 1) % testimonials.length)
                     }
-                    className="rounded-full border border-gray-200 px-3 py-2 text-sm hover:bg-gray-50"
+                    className="rounded-full border border-border px-3 py-2 text-sm hover:bg-cream"
                     aria-label="Next testimonial"
                   >
                     →
@@ -442,12 +442,12 @@ export default function Home() {
       </section>
 
       {/* Transparency */}
-      <section className="bg-[#FAF9F6] py-20">
+      <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">
             We're transparent with everything. It's in the name.
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-[#374151]">
+          <p className="mt-4 max-w-2xl mx-auto font-body text-lg text-slate">
             No hidden fees, no vague timelines. Full visibility into every step of your workflow transformation.
           </p>
           <AnimatedTransparencyGraphic />
@@ -455,19 +455,19 @@ export default function Home() {
       </section>
 
       {/* Process Pillars */}
-      <section className="bg-[#111827] py-20 text-white">
+      <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold tracking-tight">Our Process Pillars</h2>
-          <p className="mt-4 max-w-2xl text-gray-300">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-white">Our Process Pillars</h2>
+          <p className="mt-4 max-w-2xl font-body text-gray-300">
             At XRAY, we're driven by a core set of principles that guide everything we do:
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar) => (
               <div key={pillar.title} className="rounded-2xl bg-white/5 p-6 text-center">
-                <div className="flex justify-center text-blue-400">{pillar.icon}</div>
-                <div className="mt-4 text-lg font-semibold">{pillar.title}</div>
-                <p className="mt-3 text-sm leading-6 text-gray-300">{pillar.description}</p>
+                <div className="flex justify-center text-action">{pillar.icon}</div>
+                <div className="mt-4 font-display text-lg font-semibold text-white">{pillar.title}</div>
+                <p className="mt-3 font-body text-sm leading-6 text-gray-300">{pillar.description}</p>
               </div>
             ))}
           </div>
@@ -475,59 +475,59 @@ export default function Home() {
       </section>
 
       {/* Two Models */}
-      <section className="py-20">
+      <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold tracking-tight text-center">Two Models, One Mission: Your Time.</h2>
-          <p className="mt-4 text-center text-lg text-[#374151]">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-center text-navy">Two Models, One Mission: Your Time.</h2>
+          <p className="mt-4 font-body text-center text-lg text-slate">
             Whether you're an entrepreneur or an enterprise-scale team, we can help you streamline your work.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
             {/* XRAP Weekly/Bi-weekly */}
-            <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-200">
-              <div className="text-sm font-semibold text-blue-700">XRAP (Weekly or Bi-weekly)</div>
-              <h3 className="mt-2 text-2xl font-semibold text-[#111827]">
+            <div className="rounded-3xl bg-surface p-8 shadow-sm ring-1 ring-border">
+              <div className="font-body text-sm font-semibold text-action">XRAP (Weekly or Bi-weekly)</div>
+              <h3 className="mt-2 font-display text-2xl font-semibold text-navy">
                 Flexible engagement for growing teams.
               </h3>
-              <p className="mt-4 text-[#374151]">
+              <p className="mt-4 font-body text-slate">
                 Ideal for teams that need expert support on a regular cadence without a full-time commitment.
               </p>
-              <ul className="mt-6 space-y-3 text-sm text-[#374151]">
-                <li><strong>Weekly or bi-weekly sprints</strong> with dedicated experts.</li>
-                <li><strong>Async support</strong> between sessions via Slack and Loom.</li>
-                <li><strong>Transparent tracking</strong> with shared task boards.</li>
+              <ul className="mt-6 font-body space-y-3 text-sm text-slate">
+                <li><strong className="text-navy">Weekly or bi-weekly sprints</strong> with dedicated experts.</li>
+                <li><strong className="text-navy">Async support</strong> between sessions via Slack and Loom.</li>
+                <li><strong className="text-navy">Transparent tracking</strong> with shared task boards.</li>
               </ul>
-              <div className="mt-6 text-3xl font-bold">
-                $4,500<span className="text-lg font-medium text-gray-500">/mo</span>
+              <div className="mt-6 font-display text-3xl font-bold text-navy">
+                $4,500<span className="font-body text-lg font-medium text-slate">/mo</span>
               </div>
               <Link
                 href="/xray-xrap"
-                className="mt-4 inline-block rounded-full bg-[#111827] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#000]"
+                className="mt-4 inline-block rounded-full bg-navy px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-charcoal"
               >
                 Get started
               </Link>
             </div>
 
             {/* XRAP Membership Full Time */}
-            <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-200">
-              <div className="text-sm font-semibold text-blue-700">XRAP Membership (Full Time)</div>
-              <h3 className="mt-2 text-2xl font-semibold text-[#111827]">
+            <div className="rounded-3xl bg-surface p-8 shadow-sm ring-1 ring-border">
+              <div className="font-body text-sm font-semibold text-action">XRAP Membership (Full Time)</div>
+              <h3 className="mt-2 font-display text-2xl font-semibold text-navy">
                 Full-service workflow transformation.
               </h3>
-              <p className="mt-4 text-[#374151]">
+              <p className="mt-4 font-body text-slate">
                 For complex, cross-departmental projects that need a dedicated team and fixed budget.
               </p>
-              <ul className="mt-6 space-y-3 text-sm text-[#374151]">
-                <li><strong>Dedicated team:</strong> Strategist, consultant, and project manager.</li>
-                <li><strong>Proactive support</strong> at every phase with quick POCs.</li>
-                <li><strong>Enterprise tooling</strong> for monitoring and meeting summaries.</li>
+              <ul className="mt-6 font-body space-y-3 text-sm text-slate">
+                <li><strong className="text-navy">Dedicated team:</strong> Strategist, consultant, and project manager.</li>
+                <li><strong className="text-navy">Proactive support</strong> at every phase with quick POCs.</li>
+                <li><strong className="text-navy">Enterprise tooling</strong> for monitoring and meeting summaries.</li>
               </ul>
-              <div className="mt-6 text-3xl font-bold">
-                $18,000<span className="text-lg font-medium text-gray-500">/mo</span>
+              <div className="mt-6 font-display text-3xl font-bold text-navy">
+                $18,000<span className="font-body text-lg font-medium text-slate">/mo</span>
               </div>
               <Link
                 href="/xray-xrap-membership"
-                className="mt-4 inline-block rounded-full bg-[#111827] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#000]"
+                className="mt-4 inline-block rounded-full bg-navy px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-charcoal"
               >
                 Get started
               </Link>
@@ -537,15 +537,15 @@ export default function Home() {
       </section>
 
       {/* Workshops */}
-      <section className="bg-white py-20">
+      <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold tracking-tight">XRAY Workshops</h2>
-          <p className="mt-4 max-w-3xl text-lg text-[#374151]">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">XRAY Workshops</h2>
+          <p className="mt-4 font-body max-w-3xl text-lg text-slate">
             Intensive Workflow Education on AI & Automation. In-person and remote workshops designed to teach your team how to work in the future.
           </p>
           <Link
             href="/xray-workshops"
-            className="mt-6 inline-block rounded-full bg-[#111827] px-6 py-3 text-sm font-semibold text-white hover:bg-[#000]"
+            className="mt-6 inline-block rounded-full bg-navy px-6 py-3 font-body text-sm font-semibold text-white hover:bg-charcoal"
           >
             View all workshop packages.
           </Link>
@@ -553,19 +553,19 @@ export default function Home() {
       </section>
 
       {/* Products */}
-      <section className="py-20">
+      <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold tracking-tight">Our Products</h2>
-          <p className="mt-4 max-w-3xl text-lg text-[#374151]">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Our Products</h2>
+          <p className="mt-4 font-body max-w-3xl text-lg text-slate">
             Solved Workflows, Productized for You.
           </p>
 
           <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4">
             {products.map((product) => (
-              <div key={product.title} className="rounded-3xl border border-gray-200 bg-white p-6 text-center shadow-sm">
-                <div className="flex justify-center text-[#111827]">{product.icon}</div>
-                <div className="mt-4 text-sm font-semibold">{product.title}</div>
-                <div className="mt-2 text-xs text-[#374151]">{product.description}</div>
+              <div key={product.title} className="rounded-3xl border border-border bg-surface p-6 text-center shadow-sm">
+                <div className="flex justify-center text-navy">{product.icon}</div>
+                <div className="mt-4 font-display text-sm font-semibold text-navy">{product.title}</div>
+                <div className="mt-2 font-body text-xs text-slate">{product.description}</div>
               </div>
             ))}
           </div>
@@ -573,18 +573,18 @@ export default function Home() {
       </section>
 
       {/* Blog */}
-      <section className="bg-white py-20">
+      <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <h2 className="text-3xl font-semibold tracking-tight">Blog</h2>
-            <Link href="/blog" className="text-sm font-semibold text-blue-700 hover:text-blue-800">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Blog</h2>
+            <Link href="/blog" className="font-body text-sm font-semibold text-action hover:text-action/80">
               View All Articles
             </Link>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
             {blogPosts.map((post) => (
-              <article key={post.title} className="rounded-3xl bg-white p-2 shadow-sm ring-1 ring-gray-200">
+              <article key={post.title} className="rounded-3xl bg-white p-2 shadow-sm ring-1 ring-border">
                 <Image
                   src={post.image}
                   alt={post.title}
@@ -593,18 +593,18 @@ export default function Home() {
                   className="w-full rounded-2xl"
                 />
                 <div className="p-4">
-                  <div className="flex gap-2 text-xs font-semibold text-blue-700">
-                    <span className="rounded-full bg-blue-50 px-2 py-1">AI</span>
-                    <span className="rounded-full bg-blue-50 px-2 py-1">Tutorial</span>
+                  <div className="flex gap-2 font-body text-xs font-semibold text-action">
+                    <span className="rounded-full bg-inset/30 px-2 py-1">AI</span>
+                    <span className="rounded-full bg-inset/30 px-2 py-1">Tutorial</span>
                   </div>
-                  <h3 className="mt-3 text-lg font-semibold leading-snug text-[#111827]">{post.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-[#374151]">{post.description}</p>
-                  <div className="mt-4 text-xs text-gray-500">
+                  <h3 className="mt-3 font-display text-lg font-semibold leading-snug text-navy">{post.title}</h3>
+                  <p className="mt-2 font-body text-sm leading-6 text-slate">{post.description}</p>
+                  <div className="mt-4 font-body text-xs text-slate">
                     {post.author} • {post.readTime}
                   </div>
                   <Link
                     href={post.link}
-                    className="mt-3 inline-block text-sm font-semibold text-blue-700 hover:text-blue-800"
+                    className="mt-3 inline-block font-body text-sm font-semibold text-action hover:text-action/80"
                   >
                     Read Article
                   </Link>
@@ -616,15 +616,15 @@ export default function Home() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-[#111827] py-20 text-white">
+      <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight">Ready to transform your everyday?</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-white">Ready to transform your everyday?</h2>
+          <p className="mt-4 font-body max-w-2xl mx-auto text-lg text-gray-300">
             Schedule a free consultation to discover how we can transform your business processes.
           </p>
           <Link
             href="https://calendly.com/xray/15min"
-            className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#111827] hover:bg-gray-100"
+            className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 font-body text-sm font-semibold text-navy hover:bg-gray-100"
           >
             Get started
           </Link>
@@ -632,17 +632,17 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#020617] py-16 text-white">
+      <footer className="bg-navy py-16 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h3 className="text-2xl font-semibold tracking-tight">Our work does the talking.</h3>
+          <h3 className="font-display text-2xl font-semibold tracking-tight text-white">Our work does the talking.</h3>
           <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h4 className="text-sm font-semibold text-white">{group.title}</h4>
+                <h4 className="font-display text-sm font-semibold text-white">{group.title}</h4>
                 <ul className="mt-4 space-y-2">
                   {group.links.map((link) => (
                     <li key={link}>
-                      <Link href="#" className="text-sm text-gray-400 hover:text-white">
+                      <Link href="#" className="font-body text-sm text-gray-400 hover:text-white">
                         {link}
                       </Link>
                     </li>
@@ -652,16 +652,16 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-gray-800 pt-8">
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8">
             <div className="flex gap-4">
-              <Link href="https://www.linkedin.com" className="text-sm text-gray-400 hover:text-white">
+              <Link href="https://www.linkedin.com" className="font-body text-sm text-gray-400 hover:text-white">
                 LinkedIn
               </Link>
-              <Link href="https://www.youtube.com" className="text-sm text-gray-400 hover:text-white">
+              <Link href="https://www.youtube.com" className="font-body text-sm text-gray-400 hover:text-white">
                 YouTube
               </Link>
             </div>
-            <p className="text-sm text-gray-500">© XRAY Tech, Inc. 2026 - Established 2020</p>
+            <p className="font-body text-sm text-gray-500">© XRAY Tech, Inc. 2026 - Established 2020</p>
           </div>
 
           <div className="mt-12 flex justify-center">
