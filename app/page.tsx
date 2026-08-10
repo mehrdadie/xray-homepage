@@ -304,7 +304,7 @@ export default function Home() {
               <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
                 Obsessed with outcomes, not apps
               </h2>
-              <p className="mt-4 max-w-xl font-body text-lg text-slate">
+              <p className="mt-4 max-w-xl font-body text-[22px] font-normal leading-[34px] text-slate">
                 We're experts in best-in-class AI and automation tools serving small and enterprise teams alike. We adopt and stress test emerging tools to keep you on the cutting edge, helping you win the next decade.
               </p>
 
