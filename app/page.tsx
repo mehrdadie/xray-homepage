@@ -364,7 +364,7 @@ export default function Home() {
                     “{testimonials[currentSlide].quote}”
                   </blockquote>
                   <div className="mt-4">
-                    <Link href="/case-studies" className="font-body text-sm font-semibold text-action hover:text-action/80">
+                    <Link href="/case-studies" className="font-body text-base font-normal tracking-[-0.5px] leading-[20px] text-action hover:text-action/80">
                       Read Case Study
                     </Link>
                   </div>
