@@ -8,42 +8,66 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Products", href: "/products" },
   { label: "Resources", href: "/resources" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
 ];
 
 const stats = [
-  { value: "250+", label: "Projects Delivered" },
+  { value: "250+", label: "Orgs Served" },
   { value: "100,000+", label: "Hours Saved" },
-  { value: "50x", label: "Average ROI" },
-  { value: "1,550+", label: "Workflows Built" },
+  { value: "50x", label: "Highest Client ROI" },
+  { value: "1,550+", label: "Workflows Delivered" },
 ];
 
 const testimonials = [
   {
     quote:
-      "XRAY truly understands our business needs. They've helped us transform our operations digitally while keeping our existing workflows intact. The results have been outstanding.",
-    author: "Rene Dours",
-    role: "VP of Operations",
+      "It's becoming vitally important for businesses of all types to invest in digital transformation. It's a need now, not a luxury. XRAY understands this, and they're able to help businesses like ours scale digitally without having to change what already works.",
+    author: "Karan Sharma",
+    role: "Managing Director",
   },
   {
     quote:
-      "Working with XRAY has been a game-changer. Their expertise in automation and AI has allowed us to scale without adding headcount.",
-    author: "Sarah Chen",
-    role: "CTO",
+      "XRAY was extremely well-prepared and tailored the solution to our specific needs. They bridged the tech knowledge divide and provided extensive training and documentation.",
+    author: "Michelle",
+    role: "Client",
   },
   {
     quote:
-      "The team at XRAY doesn't just build tools—they build systems that last. Our onboarding process is now fully automated and our team couldn't be happier.",
-    author: "Marcus Johnson",
-    role: "Operations Director",
+      "This project has been a huge win for both FMSC and our partners! Partners now have ownership of their information, reducing their confusion and the number of emails they send us with questions.",
+    author: "Kelsey",
+    role: "FMSC",
+  },
+  {
+    quote:
+      "Scaling our company has been a key strategic priority for us recently. If we want to find and keep the right people for Level, we need to make sure that their onboarding experience is great from day one.",
+    author: "Allyn",
+    role: "Level",
+  },
+  {
+    quote:
+      "XRAY has given our process a consistency that we just didn't have before. With this automation, all of the information I need to prepare a new employee for onboarding is right where I need it.",
+    author: "Matt",
+    role: "Client",
+  },
+  {
+    quote:
+      "XRAY's automations make it much easier for us to manage and track our hiring process. It lets us create transparency and accountability without having to give someone the job of just constantly checking on the offers we've sent.",
+    author: "JT",
+    role: "Client",
+  },
+  {
+    quote:
+      "This is incredible. The robots are doing so much of this work, and it's way better than we could have done it ourselves. The documentation is also amazing – we're ready to start training our staff.",
+    author: "Amelia",
+    role: "Client",
   },
 ];
 
 const pillars = [
   {
-    title: "People First",
+    title: "People First:",
     description:
-      "Tools should serve people, not the other way around. We design solutions that empower your team and reduce friction.",
+      "Tools should serve people, not the other way around. Our solutions are designed to empower your team.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
         <circle cx="12" cy="8" r="4" />
@@ -52,19 +76,9 @@ const pillars = [
     ),
   },
   {
-    title: "Simplify by Design",
+    title: "Results Oriented:",
     description:
-      "We cut through complexity to create elegant, straightforward processes that anyone can use without extensive training.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
-        <path d="M9 18h6M10 22h4M12 2v1M4.22 4.22l.71.71M2 12h1M4.22 19.78l.71-.71M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Results Oriented",
-    description:
-      "We measure success by meaningful outcomes. If it doesn't move the needle for your business, we don't waste time on it.",
+      "We measure our success by creating meaningful outcomes for your business. If it doesn't move the needle, we don't do it.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
         <path d="M3 17l4-8 4 5 4-9 4 12" />
@@ -73,9 +87,20 @@ const pillars = [
     ),
   },
   {
-    title: "Continuous Improvement",
+    title: "Simplicity by Design:",
     description:
-      "As your needs evolve, so do our solutions. We grow and optimize with you to ensure long-term success.",
+      "We cut through complexity to create elegant, straightforward processes that anyone can use.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Continuous Improvement:",
+    description:
+      "As your needs evolve, so do our solutions. We grow and optimize with you to ensure your long-term success.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
         <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
@@ -86,42 +111,45 @@ const pillars = [
 
 const blogPosts = [
   {
-    title: "Creating Team-wide Dashboards with Google Sheets",
+    title: "Creating Team-wide Standards with Claude Skills",
     description:
-      "Learn how we built a unified dashboard system that gives every team member real-time visibility into key metrics.",
+      "In this post, we explore the reality of building Claude skills for your team: version control, who approves changes, and what your security team will ask.",
     author: "Tom Nassr",
-    readTime: "5 min read",
-    link: "/post/google-sheets-dashboards",
+    readTime: "X min read",
+    link: "/post/claude-skills",
     image: "https://cdn.prod.website-files.com/618b2c8275195d098d29c61c/6a70aab5d4e970ba6df82af0_Claude%20Skills%20for%20Leaders%20Thumbnail%20v2-selection.png",
   },
   {
-    title: "Google Sheets vs. Airtable: When to Use Each",
+    title: "Google Sheets To Airtable, Minus The Data Entry",
     description:
-      "Not sure which tool fits your workflow? We break down the strengths and ideal use cases for both platforms.",
+      "Learn how we migrated a client from Google Sheets to Airtable without manual data entry, preserving formulas, permissions, and workflows.",
     author: "Matt Jasinski",
-    readTime: "7 min read",
-    link: "/post/google-sheets-vs-airtable",
+    readTime: "X min read",
+    link: "/post/google-sheets-to-airtable",
     image: "https://cdn.prod.website-files.com/618b2c8275195d098d29c61c/6a67698ab294636783807db7_Blog%20Thumbnail%201c-selection%20(3).png",
   },
   {
-    title: "The Difference Between Low-Code and No-Code",
+    title: "The Difference Between Using AI and Building With AI",
     description:
-      "Understanding when to use low-code vs no-code platforms can save your team weeks of development time.",
+      "Most people judge AI by one good answer. That's the wrong test. Learn how to turn a single answer into a system.",
     author: "Tom Nassr",
-    readTime: "6 min read",
-    link: "/post/low-code-vs-no-code",
+    readTime: "X min read",
+    link: "/post/build-ai-systems",
     image: "https://cdn.prod.website-files.com/618b2c8275195d098d29c61c/6a5e3297ab1f94872e8c0f2f_Stop%20Using%20AI%20Like%20a%20Search%20Engine%20Thumbnail-selection%20(1).png",
   },
 ];
 
 const footerLinks = [
-  { title: "Services", links: ["XRAY Monthly", "XRAY Hourly", "Content Creation"] },
+  { title: "Company", links: ["About Us", "Terms & Conditions", "Privacy Policy"] },
   {
     title: "Products",
     links: ["XRSEARCH", "XR DEBRIEF", "XR GUARDIAN", "XR ONBOARDING", "XR BLOB"],
   },
-  { title: "Resources", links: ["Blog", "Case Studies", "Assessments"] },
-  { title: "About", links: ["About Us", "Terms & Conditions", "Privacy Policy", "Contact"] },
+  { title: "Services", links: ["XRAY Monthly", "XRAY Hourly", "Content Creation", "Assessments"] },
+  {
+    title: "Resources",
+    links: ["Blog", "Case Studies"],
+  },
 ];
 
 function AnimatedHeroIllustration() {
@@ -211,7 +239,7 @@ export default function Home() {
             href="https://calendly.com/xray/15min"
             className="rounded-full bg-action px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-action/90"
           >
-            Book a Free Intro
+            Book 15 Minutes Free
           </Link>
         </div>
       </header>
@@ -224,20 +252,20 @@ export default function Home() {
               Do your workflows work?
             </h1>
             <p className="mt-6 font-body text-lg leading-8 text-slate">
-              We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what's slowing you down, and fix it once and for all.
+              We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what's slowing you down, and fix it once and for all. That's our promise.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 href="https://calendly.com/xray/15min"
                 className="rounded-full bg-action px-6 py-3 font-body text-sm font-semibold text-white hover:bg-action/90"
               >
-                Book a Free Intro
+                Talk With Us
               </Link>
               <Link
-                href="/work"
+                href="/assessment"
                 className="rounded-full border border-border px-6 py-3 font-body text-sm font-semibold text-navy hover:bg-navy hover:text-white"
               >
-                View Our Work
+                Free Workflow Assessment
               </Link>
             </div>
           </div>
@@ -253,7 +281,7 @@ export default function Home() {
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
             <div className="lg:w-1/2">
               <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
-                Obsessed with outcomes, not apps.
+                Obsessed with outcomes, not apps
               </h2>
               <p className="mt-4 max-w-xl font-body text-lg text-slate">
                 We're experts in best-in-class AI and automation tools serving small and enterprise teams alike.
@@ -264,15 +292,6 @@ export default function Home() {
                   <div key={stat.label} className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
                     <div className="font-display text-xl font-bold text-navy">{stat.value}</div>
                     <div className="mt-1 font-body text-xs text-slate">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Logo cloud placeholder */}
-              <div className="mt-8 flex flex-wrap items-center gap-6 opacity-60">
-                {["Salesforce", "HubSpot", "Slack", "Google", "Microsoft"].map((logo) => (
-                  <div key={logo} className="font-body text-sm font-semibold text-slate">
-                    {logo}
                   </div>
                 ))}
               </div>
@@ -295,7 +314,10 @@ export default function Home() {
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Client stories.</h2>
+            <div>
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Client stories.</h2>
+              <p className="mt-1 font-body text-sm text-slate">Real results from Businesses we've transformed.</p>
+            </div>
             <Link href="/case-studies" className="font-body text-sm font-semibold text-action hover:text-action/80">
               View All Case Studies
             </Link>
@@ -316,9 +338,13 @@ export default function Home() {
                 </div>
 
                 <div className="hidden sm:flex flex-col items-center gap-3">
-                  <div className="w-20 h-20 rounded-full bg-navy/10 flex items-center justify-center text-navy font-display text-xl font-bold">
-                    {testimonials[currentSlide].author.split(' ').map(n => n[0]).join('')}
-                  </div>
+                  <Image
+                    src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695ebc56269c4c5850e2e73f_testimonial-karan.svg"
+                    alt={testimonials[currentSlide].author}
+                    width={80}
+                    height={80}
+                    className="rounded-full"
+                  />
                   <div className="text-center">
                     <div className="font-display text-sm font-semibold text-navy">{testimonials[currentSlide].author}</div>
                     <div className="font-body text-xs text-slate">{testimonials[currentSlide].role}</div>
@@ -336,7 +362,7 @@ export default function Home() {
                     onClick={() =>
                       setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
                     }
-                    className="rounded-full border border-border px-3 py-2 text-sm hover:bg-cream"
+                    className="rounded-full border border-border p-2 text-sm hover:bg-cream"
                     aria-label="Previous testimonial"
                   >
                     ←
@@ -346,7 +372,7 @@ export default function Home() {
                     onClick={() =>
                       setCurrentSlide((prev) => (prev + 1) % testimonials.length)
                     }
-                    className="rounded-full border border-border px-3 py-2 text-sm hover:bg-cream"
+                    className="rounded-full border border-border p-2 text-sm hover:bg-cream"
                     aria-label="Next testimonial"
                   >
                     →
@@ -358,33 +384,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transparency */}
-      <section className="bg-background py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">
-            We're transparent with everything; it's in the name.
-          </h2>
-          <p className="mt-4 max-w-2xl mx-auto font-body text-lg text-slate">
-            No hidden fees, no vague timelines. Full visibility into every step of your workflow transformation.
-          </p>
-          <AnimatedTransparencyGraphic />
-        </div>
-      </section>
-
       {/* Process Pillars */}
-      <section className="bg-background py-20">
+      <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Our Process Pillars</h2>
-          <p className="mt-4 max-w-2xl font-body text-lg text-slate">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-white">Our Process Pillars</h2>
+          <p className="mt-4 max-w-2xl font-body text-lg text-gray-300">
             At XRAY, we're driven by a core set of principles that guide everything we do:
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar) => (
-              <div key={pillar.title} className="rounded-2xl border border-border bg-surface p-6 text-center shadow-sm">
+              <div key={pillar.title} className="rounded-2xl bg-white/5 p-6 text-center">
                 <div className="flex justify-center text-action">{pillar.icon}</div>
-                <div className="mt-4 font-display text-lg font-semibold text-navy">{pillar.title}</div>
-                <p className="mt-3 font-body text-sm leading-6 text-slate">{pillar.description}</p>
+                <div className="mt-4 font-display text-lg font-semibold text-white">{pillar.title}</div>
+                <p className="mt-3 font-body text-sm leading-6 text-gray-300">{pillar.description}</p>
               </div>
             ))}
           </div>
@@ -392,61 +405,67 @@ export default function Home() {
       </section>
 
       {/* Two Models */}
-      <section className="bg-navy py-20 text-white">
+      <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white text-center">Two Models, One Mission: Your Time.</h2>
-          <p className="mt-4 font-body text-center text-lg text-gray-300">
-            Whether you're an entrepreneur or an enterprise-scale team, we can help you streamline your work.
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-center text-navy">Two Models, One Mission: Your Time.</h2>
+          <p className="mt-4 font-body text-center text-lg text-slate">
+            Whether you're an entrepreneur or an enterprise-scale team, we can help you streamline your work with transparent hourly and monthly packages.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
             {/* XRAY Hourly */}
-            <div className="rounded-3xl bg-white/5 p-8 shadow-sm ring-1 ring-white/10">
-              <div className="font-body text-sm font-semibold text-gray-300">XRAY Hourly</div>
-              <h3 className="mt-2 font-display text-2xl font-semibold text-white">
-                Expert support when you need it.
-              </h3>
-              <p className="mt-4 font-body text-gray-300">
-                Ideal for teams that need expert support without a full-time commitment.
-              </p>
-              <ul className="mt-6 font-body space-y-3 text-sm text-gray-300">
-                <li><strong className="text-white">Strategy & Consulting</strong> to align on goals.</li>
-                <li><strong className="text-white">Project Management</strong> to keep delivery on track.</li>
-                <li><strong className="text-white">Implementation</strong> with your existing tools.</li>
-              </ul>
-              <div className="mt-6 font-display text-3xl font-bold text-white">
-                $250<span className="font-body text-lg font-medium text-gray-400">/hr</span>
+            <div className="rounded-3xl bg-surface p-8 shadow-sm ring-1 ring-border">
+              <div className="flex items-center gap-3">
+                <Image src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d47a84219730184ac7c38_8abab9dfedcf83e42da65280c8fdb4d1_logo-xray.svg" alt="Xray logo" width={32} height={32} />
+                <div className="font-body text-sm font-semibold text-slate">Hourly</div>
+              </div>
+              <div className="mt-4">
+                <p className="font-body text-slate">For agile teams, startups, and owner/operators who need expert, hands-on support – right away.</p>
+                <p className="mt-2 font-body text-slate">
+                  <strong className="text-navy">XRAY Hourly</strong> is a <strong className="text-navy">Done with You</strong> model focused on immediate outcomes for maximum efficiency on a tight scope.
+                </p>
+                <ul className="mt-4 font-body space-y-2 text-sm text-slate">
+                  <li><strong className="text-navy">Flexible, hourly, as-needed billing</strong> with no long-term commitment.</li>
+                  <li><strong className="text-navy">Collaborative Building:</strong> Work side-by-side with a hand-picked expert on a live, recorded Zoom call.</li>
+                  <li><strong className="text-navy">The client portal</strong> has a repository of all your past calls and corresponding transcripts for you to review, download, and keep forever if you'd like. Schedule more time whenever is convenient for you, and bring anyone on your team to the sessions.</li>
+                </ul>
+              </div>
+              <div className="mt-6 font-display text-3xl font-bold text-navy">
+                $250<span className="font-body text-lg font-medium text-slate">/hr</span>
               </div>
               <Link
                 href="/xray-hourly"
-                className="mt-4 inline-block rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-navy hover:bg-gray-100"
+                className="mt-4 inline-block rounded-full bg-navy px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-charcoal"
               >
-                Get started
+                Learn More About XRAY Hourly
               </Link>
             </div>
 
             {/* XRAY Monthly */}
-            <div className="rounded-3xl bg-white/5 p-8 shadow-sm ring-1 ring-white/10">
-              <div className="font-body text-sm font-semibold text-gray-300">XRAY Monthly</div>
-              <h3 className="mt-2 font-display text-2xl font-semibold text-white">
-                Full-service workflow transformation.
-              </h3>
-              <p className="mt-4 font-body text-gray-300">
-                For complex projects that need a dedicated team and fixed budget.
-              </p>
-              <ul className="mt-6 font-body space-y-3 text-sm text-gray-300">
-                <li><strong className="text-white">Dedicated Team</strong> working across your stack.</li>
-                <li><strong className="text-white">Priority Support</strong> with guaranteed response times.</li>
-                <li><strong className="text-white">Fractional CMO</strong> for strategy and execution.</li>
-              </ul>
-              <div className="mt-6 font-display text-3xl font-bold text-white">
-                $15,000<span className="font-body text-lg font-medium text-gray-400">/mo</span>
+            <div className="rounded-3xl bg-surface p-8 shadow-sm ring-1 ring-border">
+              <div className="flex items-center gap-3">
+                <Image src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d47a84219730184ac7c38_8abab9dfedcf83e42da65280c8fdb4d1_logo-xray.svg" alt="Xray logo" width={32} height={32} />
+                <div className="font-body text-sm font-semibold text-slate">Monthly</div>
+              </div>
+              <div className="mt-4">
+                <p className="font-body text-slate">For complex, cross-departmental projects, we offer full service workflow transformation at scale.</p>
+                <p className="mt-2 font-body text-slate">
+                  <strong className="text-navy">XRAY Monthly</strong> is a <strong className="text-navy">Full Service</strong> model where we own the complete workflow design lifecycle: discovery, design, execution, change management, and maintenance.
+                </p>
+                <ul className="mt-4 font-body space-y-2 text-sm text-slate">
+                  <li><strong className="text-navy">Dedicated Team:</strong> Strategist, consultant, and project manager.</li>
+                  <li><strong className="text-navy">Proactive support</strong> at every phase with quick POCs.</li>
+                  <li><strong className="text-navy">Enterprise tooling</strong> for monitoring and meeting summaries.</li>
+                </ul>
+              </div>
+              <div className="mt-6 font-display text-3xl font-bold text-navy">
+                $15,000<span className="font-body text-lg font-medium text-slate">/mo</span>
               </div>
               <Link
                 href="/xray-monthly"
-                className="mt-4 inline-block rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-navy hover:bg-gray-100"
+                className="mt-4 inline-block rounded-full bg-navy px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-charcoal"
               >
-                Get started
+                Learn More About XRAY Monthly
               </Link>
             </div>
           </div>
@@ -456,29 +475,12 @@ export default function Home() {
       {/* Workshops */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="lg:w-1/2">
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">XRAY Workshops</h2>
-              <p className="mt-4 font-body max-w-2xl text-lg text-slate">
-                Intensive Workflow Education on AI & Automation. In-person and remote workshops designed to teach your team how to work in the future.
-              </p>
-              <Link
-                href="/xray-workshops"
-                className="mt-6 inline-block rounded-full bg-navy px-6 py-3 font-body text-sm font-semibold text-white hover:bg-charcoal"
-              >
-                Explore Workshops & Training
-              </Link>
-            </div>
-            <div className="lg:w-1/2">
-              <Image
-                src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d452cd0ef147bc869a425_fdb5b1e5ea4bbef216d93f59a2645fef_illus-apps.svg"
-                alt="Workshops illustration"
-                width={600}
-                height={400}
-                className="w-full"
-              />
-            </div>
-          </div>
+          <Link
+            href="/xray-workshops"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 font-body text-sm font-semibold text-navy hover:bg-cream"
+          >
+            Explore Our Workshops & Workforce Training
+          </Link>
         </div>
       </section>
 
@@ -503,21 +505,12 @@ export default function Home() {
                   className="w-full rounded-2xl"
                 />
                 <div className="p-4">
-                  <div className="flex gap-2 font-body text-xs font-semibold text-action">
-                    <span className="rounded-full bg-inset/30 px-2 py-1">Guide</span>
-                    <span className="rounded-full bg-inset/30 px-2 py-1">Tutorial</span>
+                  <h3 className="font-display text-lg font-semibold leading-snug text-navy">{post.title}</h3>
+                  <div className="mt-4">
+                    <Link href={post.link} className="font-body text-sm font-semibold text-action hover:text-action/80">
+                      Read Article
+                    </Link>
                   </div>
-                  <h3 className="mt-3 font-display text-lg font-semibold leading-snug text-navy">{post.title}</h3>
-                  <p className="mt-2 font-body text-sm leading-6 text-slate">{post.description}</p>
-                  <div className="mt-4 font-body text-xs text-slate">
-                    {post.author} • {post.readTime}
-                  </div>
-                  <Link
-                    href={post.link}
-                    className="mt-3 inline-block font-body text-sm font-semibold text-action hover:text-action/80"
-                  >
-                    Read Article
-                  </Link>
                 </div>
               </article>
             ))}
@@ -526,17 +519,17 @@ export default function Home() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-navy py-20 text-white">
+      <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white">Ready to transform your everyday?</h2>
-          <p className="mt-4 font-body max-w-2xl mx-auto text-lg text-gray-300">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Ready to transform your everyday?</h2>
+          <p className="mt-4 font-body max-w-2xl mx-auto text-lg text-slate">
             Schedule a free consultation to discover how we can transform your business processes.
           </p>
           <Link
             href="https://calendly.com/xray/15min"
-            className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 font-body text-sm font-semibold text-navy hover:bg-gray-100"
+            className="mt-8 inline-block rounded-full bg-action px-8 py-3.5 font-body text-sm font-semibold text-white hover:bg-action/90"
           >
-            Book a Free Intro
+            Book 15 Minutes Free
           </Link>
         </div>
       </section>
@@ -562,16 +555,32 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8">
+          <div className="mt-12 border-t border-white/10 pt-8">
+            <p className="font-body text-sm text-gray-400">
+              Hear from the humans at XRAY and learn how to get AI and automation working in your workflows.
+            </p>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="w-full rounded-full border border-white/20 bg-white/10 px-4 py-2 font-body text-sm text-white placeholder:text-gray-400 focus:outline-none"
+              />
+              <button type="button" className="w-full rounded-full bg-white px-5 py-2.5 font-body text-sm font-semibold text-navy hover:bg-gray-100 sm:w-auto">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-4">
+            <p className="font-body text-sm text-gray-500">© XRAY Tech, Inc. 2026 - Established 2020</p>
             <div className="flex gap-4">
-              <Link href="https://www.linkedin.com" className="font-body text-sm text-gray-400 hover:text-white">
-                LinkedIn
+              <Link href="https://www.linkedin.com" className="text-gray-400 hover:text-white">
+                <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="https://www.youtube.com" className="font-body text-sm text-gray-400 hover:text-white">
-                YouTube
+              <Link href="https://www.youtube.com" className="text-gray-400 hover:text-white">
+                <span className="sr-only">YouTube</span>
               </Link>
             </div>
-            <p className="font-body text-sm text-gray-500">© XRAY Tech, Inc. 2026 - Established 2020</p>
           </div>
 
           <div className="mt-12 flex justify-center">
