@@ -228,7 +228,7 @@ export default function Home() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="font-body text-sm font-medium text-navy hover:text-action"
+                className="font-body text-base text-slate hover:text-action"
               >
                 {item.label}
                 <span className="ml-1 inline-block text-xs">▾</span>
@@ -238,7 +238,7 @@ export default function Home() {
 
           <Link
             href="https://calendly.com/xray/15min"
-            className="rounded-full bg-action px-5 py-2.5 font-body text-sm font-semibold text-white hover:bg-action/90"
+            className="rounded-lg bg-action px-5 py-2.5 font-display text-base font-semibold text-white hover:bg-action/90"
           >
             Book 15 Minutes Free
           </Link>
@@ -270,7 +270,7 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="font-display text-5xl font-semibold tracking-tight text-navy sm:text-6xl">
+            <h1 className="font-display text-[96px] leading-[110.4px] tracking-[-2.5px] font-bold text-navy sm:text-[96px]">
               Do your workflows work?
             </h1>
             <p className="mt-6 text-center text-lg leading-8 text-slate">
@@ -279,13 +279,13 @@ export default function Home() {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="https://calendly.com/xray/15min"
-                className="rounded-full bg-action px-6 py-3 text-sm font-semibold text-white hover:bg-action/90"
+                className="inline-block rounded-lg bg-action px-6 py-4 font-display text-base font-semibold capitalize text-white hover:bg-action/90"
               >
                 Talk With Us
               </Link>
               <Link
                 href="/assessment"
-                className="rounded-full border border-border px-6 py-3 text-sm font-semibold text-navy hover:bg-navy hover:text-white"
+                className="block rounded-lg bg-transparent px-6 py-4 font-display text-base font-semibold capitalize text-action hover:bg-navy hover:text-white"
               >
                 Free Workflow Assessment
               </Link>
