@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const navLinks = [
   { label: "Services", href: "#" },
@@ -156,6 +157,8 @@ const footerLinks = [
 ];
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   return (
     <div className="min-h-screen bg-[#FAF9F6]">
       {/* Header */}
@@ -229,32 +232,36 @@ export default function Home() {
       </section>
 
       {/* Obsessed with outcomes */}
-      <section className="bg-[#111827] py-20 text-white">
+      <section className="bg-[#FAF9F6] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Obsessed with outcomes, not apps
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg text-gray-300">
-            We’re experts in best-in-class AI and automation tools serving small and enterprise teams alike. We adopt and stress test emerging tools to keep you on the cutting edge, helping you win the next decade.
-          </p>
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                Obsessed with outcomes, not apps
+              </h2>
+              <p className="mt-4 max-w-xl text-lg text-[#374151]">
+                We’re experts in best-in-class AI and automation tools serving small and enterprise teams alike. We adopt and stress test emerging tools to keep you on the cutting edge, helping you win the next decade.
+              </p>
 
-          <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="rounded-2xl bg-white/5 p-6">
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="mt-1 text-sm text-gray-300">{stat.label}</div>
+              <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                    <div className="text-xl font-bold text-[#111827]">{stat.value}</div>
+                    <div className="mt-1 text-xs text-[#374151]">{stat.label}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="mt-12">
-            <Image
-              src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d452cd0ef147bc869a425_fdb5b1e5ea4bbef216d93f59a2645fef_illus-apps.svg"
-              alt="App ecosystem illustration"
-              width={1200}
-              height={600}
-              className="w-full"
-            />
+            <div className="lg:w-1/2">
+              <Image
+                src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d452cd0ef147bc869a425_fdb5b1e5ea4bbef216d93f59a2645fef_illus-apps.svg"
+                alt="App ecosystem illustration"
+                width={1200}
+                height={600}
+                className="w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -264,27 +271,65 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <h2 className="text-3xl font-semibold tracking-tight">Client stories.</h2>
-            <Link href="#" className="text-sm font-semibold text-blue-700 hover:text-blue-800">
+            <Link href="/case-studies" className="text-sm font-semibold text-blue-700 hover:text-blue-800">
               View All Case Studies
             </Link>
           </div>
 
           <div className="mt-10">
             <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-200">
-              <blockquote className="text-xl font-medium leading-relaxed text-[#111827]">
-                "{testimonials[0].quote}"
-              </blockquote>
-              <div className="mt-6 flex items-center gap-4">
-                <Image
-                  src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695ebc56269c4c5850e2e73f_testimonial-karan.svg"
-                  alt={testimonials[0].author}
-                  width={56}
-                  height={56}
-                  className="rounded-full"
-                />
-                <div>
-                  <div className="font-semibold">{testimonials[0].author}</div>
-                  <div className="text-sm text-gray-500">{testimonials[0].role}</div>
+              <div className="flex items-start justify-between gap-6">
+                <div className="flex-1">
+                  <blockquote className="text-xl font-medium leading-relaxed text-[#111827]">
+                    “{testimonials[currentSlide].quote}”
+                  </blockquote>
+                  <div className="mt-4">
+                    <Link href="/case-studies" className="text-sm font-semibold text-blue-700 hover:text-blue-800">
+                      Read Case Study
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="hidden sm:flex flex-col items-center gap-3">
+                  <Image
+                    src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695ebc56269c4c5850e2e73f_testimonial-karan.svg"
+                    alt={testimonials[currentSlide].author}
+                    width={80}
+                    height={80}
+                    className="rounded-full"
+                  />
+                  <div className="text-center">
+                    <div className="font-semibold">{testimonials[currentSlide].author}</div>
+                    <div className="text-xs text-gray-500">{testimonials[currentSlide].role}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 flex items-center justify-between">
+                <div className="text-xs text-gray-500">
+                  {currentSlide + 1} of {testimonials.length}
+                </div>
+                <div className="flex gap-3">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
+                    }
+                    className="rounded-full border border-gray-200 px-3 py-2 text-sm hover:bg-gray-50"
+                    aria-label="Previous testimonial"
+                  >
+                    ←
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+                    }
+                    className="rounded-full border border-gray-200 px-3 py-2 text-sm hover:bg-gray-50"
+                    aria-label="Next testimonial"
+                  >
+                    →
+                  </button>
                 </div>
               </div>
             </div>
