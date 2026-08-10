@@ -220,7 +220,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <Link href="/" className="flex items-center">
-            <span className="font-display text-2xl font-bold tracking-tight text-navy">XRAY</span>
+            <span className="font-body text-base font-normal tracking-[-0.5px] leading-[20px] text-charcoal">XRAY</span>
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -228,7 +228,8 @@ export default function Home() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="font-body text-base text-slate hover:text-action"
+                className="font-body text-[18px] font-normal tracking-[-0.5px] leading-[28px] text-charcoal hover:text-action"
+                style={{ padding: '8px' }}
               >
                 {item.label}
                 <span className="ml-1 inline-block text-xs">▾</span>
@@ -238,7 +239,8 @@ export default function Home() {
 
           <Link
             href="https://calendly.com/xray/15min"
-            className="rounded-lg bg-action px-5 py-2.5 font-display text-base font-semibold text-white hover:bg-action/90"
+            className="inline-block rounded-lg bg-action px-[24px] py-[16px] font-display text-base font-semibold capitalize text-white hover:bg-action/90"
+            style={{ fontFamily: '"new-order", sans-serif', fontSize: '16px', fontWeight: 600, letterSpacing: 'normal', color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(21, 102, 185)', borderRadius: '8px', padding: '16px 24px', border: '0px none rgb(255, 255, 255)', textTransform: 'capitalize', display: 'inline-block', margin: '0px' }}
           >
             Book 15 Minutes Free
           </Link>
@@ -301,7 +303,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+              <h2 className="font-display text-[40px] leading-[48px] tracking-[-1px] font-bold text-navy">
                 Obsessed with outcomes, not apps
               </h2>
               <p className="mt-4 max-w-xl font-body text-[22px] font-normal leading-[34px] text-slate">
