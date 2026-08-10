@@ -5,31 +5,26 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Services", href: "#" },
-  { label: "Products", href: "#" },
-  { label: "Resources", href: "#" },
-  { label: "About Us", href: "/about" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const stats = [
-  { value: "250+", label: "Orgs Served" },
-  { value: "100,000+", label: "Hours Saved" },
-  { value: "50x", label: "Highest Client ROI" },
-  { value: "1,550+", label: "Workflows Delivered" },
+  { value: "150,000+", label: "Hours Saved" },
+  { value: "300+", label: "Projects" },
+  { value: "30+", label: "Integrations" },
+  { value: "20+", label: "Tools" },
 ];
 
 const testimonials = [
   {
     quote:
-      "It’s becoming vitally important for businesses of all types to invest in digital transformation. It’s a need now, not a luxury. XRAY understands this, and they’re able to help businesses like ours scale digitally without having to change what already works.",
-    author: "Karan Sharma",
-    role: "Managing Director",
-  },
-  {
-    quote:
-      "This project has been a huge win for both FMSC and our partners! Partners now have ownership of their information, reducing their confusion and the number of emails they send us with questions.",
-    author: "Kelsey",
-    role: "FMSC",
+      "It's becoming really important for businesses of all types to invest in digital transformation. It's not a nice to have, it's a must. XRAY understands this, and they're able to help businesses like ours scale digitally without having to change what already works.",
+    author: "Aaron Shapiro",
+    role: "CEO",
   },
   {
     quote:
@@ -39,25 +34,31 @@ const testimonials = [
   },
   {
     quote:
+      "This project has been a huge win for both FMSC and our partners! Partners now have ownership of their information, reducing their confusion and the number of emails they send us with questions.",
+    author: "Kelsey",
+    role: "FMSC",
+  },
+  {
+    quote:
       "Scaling our company has been a key strategic priority for us recently. If we want to find and keep the right people for Level, we need to make sure that their onboarding experience is great from day one.",
     author: "Allyn",
     role: "Level",
   },
   {
     quote:
-      "XRAY has given our process a consistency that we just didn’t have before. With this automation, all of the information I need to prepare a new employee for onboarding is right where I need it.",
+      "XRAY has given our process a consistency that we just didn't have before. With this automation, all of the information I need to prepare a new employee for onboarding is right where I need it.",
     author: "Matt",
     role: "Client",
   },
   {
     quote:
-      "XRAY’s automations make it much easier for us to manage and track our hiring process. It lets us create transparency and accountability without having to give someone the job of just constantly checking on the offers we’ve sent.",
+      "XRAY's automations make it much easier for us to manage and track our hiring process. It lets us create transparency and accountability without having to give someone the job of just constantly checking on the offers we've sent.",
     author: "JT",
     role: "Client",
   },
   {
     quote:
-      "This is incredible. The robots are doing so much of this work, and it's way better than we could have done it ourselves. The documentation is also amazing – we’re ready to start training our staff.",
+      "This is incredible. The robots are doing so much of this work, and it's way better than we could have done it ourselves. The documentation is also amazing – we're ready to start training our staff.",
     author: "Amelia",
     role: "Client",
   },
@@ -65,24 +66,47 @@ const testimonials = [
 
 const pillars = [
   {
-    title: "People First:",
+    title: "People First",
     description:
-      "Tools should serve people, not the other way around. Our solutions are designed to empower your team and make their work more meaningful.",
+      "Tools should serve people, not the other way around. Our solutions are designed to empower your team.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" />
+      </svg>
+    ),
   },
   {
-    title: "Results Oriented:",
+    title: "Results Oriented",
     description:
       "We measure our success by creating meaningful outcomes for your business. If it doesn't move the needle, we don't do it.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+        <path d="M3 17l4-8 4 5 4-9 4 12" />
+        <path d="M3 17h18" />
+      </svg>
+    ),
   },
   {
-    title: "Simplicity by Design:",
+    title: "Simplicity by Design",
     description:
-      "We cut through complexity to create elegant, straightforward processes that anyone can use. Simplicity is the ultimate sophistication.",
+      "We cut through complexity to create elegant, straightforward processes that anyone can use.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </svg>
+    ),
   },
   {
-    title: "Continuous Improvement:",
+    title: "Continuous Improvement",
     description:
       "As your needs evolve, so do our solutions. We grow and optimize with you to ensure your long-term success.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+      </svg>
+    ),
   },
 ];
 
@@ -106,7 +130,7 @@ const products = [
     image: "https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d63d9ad44f49554e0934e_product-3.svg",
   },
   {
-    title: "View the full list  of tools",
+    title: "View the full list of tools",
     link: "/products",
     linkLabel: "Explore All Tools",
     image: "https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d63dd990a98d1548cce3a_product-4.svg",
@@ -115,27 +139,27 @@ const products = [
 
 const blogPosts = [
   {
-    title: "Creating Team-wide Standards with Claude Skills",
+    title: "Creating Tools with Datadog...",
     description:
-      "In this post, we explore the reality of building Claude skills for your team: version control, who approves changes, and what your security team will ask.",
+      "How we built custom Datadog tools to monitor and improve workflow performance across client environments.",
     author: "Tom Nassr",
     readTime: "X min read",
-    link: "/post/claude-skills-for-leaders",
+    link: "/post/datadog-tools",
     image: "https://cdn.prod.website-files.com/618b2c8275195d098d29c61c/6a70aab5d4e970ba6df82af0_Claude%20Skills%20for%20Leaders%20Thumbnail%20v2-selection.png",
   },
   {
-    title: "Google Sheets To Airtable, Minus The Data Entry",
+    title: "Google Search is Evolving...",
     description:
-      "Sick of messy spreadsheets? We'll show you how to convert scattered Google Sheets to a single Airtable base with some help from Claude.",
+      "What the latest changes to Google Search mean for automation workflows and how to adapt your strategy.",
     author: "Matt Jasinski",
     readTime: "X min read",
-    link: "/post/convert-sheets-airtable-claude-skill",
+    link: "/post/google-search-evolving",
     image: "https://cdn.prod.website-files.com/618b2c8275195d098d29c61c/6a67698ab294636783807db7_Blog%20Thumbnail%201c-selection%20(3).png",
   },
   {
-    title: "The Difference Between Using AI and Building With AI",
+    title: "The Difference Between...",
     description:
-      "Most people judge AI by one good answer. That's the wrong test. Learn how to turn a single answer into a system that scores your work and improves itself.",
+      "Most people judge AI by one good answer. That's the wrong test. Learn how to turn a single answer into a system.",
     author: "Tom Nassr",
     readTime: "X min read",
     link: "/post/build-ai-systems",
@@ -155,6 +179,70 @@ const footerLinks = [
     links: ["Blog", "Case Studies", "Assessments"],
   },
 ];
+
+function AnimatedIllustration() {
+  return (
+    <div className="relative w-full max-w-md mx-auto">
+      <svg viewBox="0 0 400 300" className="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <style>{`
+          .float { animation: float 6s ease-in-out infinite; }
+          .float-delayed { animation: float 6s ease-in-out 3s infinite; }
+          .pulse { animation: pulse 3s ease-in-out infinite; }
+          .spin-slow { animation: spin 20s linear infinite; }
+          @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+          }
+          @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+          }
+          @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+        `}</style>
+        <circle cx="200" cy="150" r="120" fill="#E0F2FE" className="pulse" />
+        <rect x="120" y="100" width="160" height="100" rx="12" fill="#111827" className="float" />
+        <rect x="140" y="115" width="120" height="8" rx="4" fill="#374151" />
+        <rect x="140" y="130" width="80" height="8" rx="4" fill="#4B5563" />
+        <circle cx="250" cy="180" r="20" fill="#2563EB" className="float-delayed" />
+        <path d="M100 200 L140 160 L180 190 L220 140 L260 170 L300 120" stroke="#2563EB" strokeWidth="3" fill="none" className="pulse" />
+        <circle cx="100" cy="200" r="6" fill="#2563EB" />
+        <circle cx="140" cy="160" r="6" fill="#2563EB" />
+        <circle cx="180" cy="190" r="6" fill="#2563EB" />
+        <circle cx="220" cy="140" r="6" fill="#2563EB" />
+        <circle cx="260" cy="170" r="6" fill="#2563EB" />
+        <circle cx="300" cy="120" r="6" fill="#2563EB" />
+      </svg>
+    </div>
+  );
+}
+
+function AnimatedTransparencyGraphic() {
+  return (
+    <div className="flex justify-center py-8">
+      <svg viewBox="0 0 200 200" className="w-48 h-48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <style>{`
+          .rotate-slow { animation: spin 15s linear infinite; transform-origin: center; }
+          .pulse-ring { animation: pulse-ring 2s ease-out infinite; }
+          @keyframes pulse-ring {
+            0% { r: 40; opacity: 0.8; }
+            100% { r: 80; opacity: 0; }
+          }
+        `}</style>
+        <circle cx="100" cy="100" r="60" fill="#0F172A" />
+        <circle cx="100" cy="100" r="40" fill="#1E293B" />
+        <g className="rotate-slow">
+          <circle cx="100" cy="100" r="70" stroke="#2563EB" strokeWidth="2" fill="none" opacity="0.5" />
+          <circle cx="100" cy="100" r="80" stroke="#2563EB" strokeWidth="1" fill="none" opacity="0.3" />
+        </g>
+        <circle cx="100" cy="100" r="40" fill="none" stroke="#2563EB" strokeWidth="3" className="pulse-ring" />
+        <path d="M85 95 L95 105 L115 85" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -190,7 +278,7 @@ export default function Home() {
             href="https://calendly.com/xray/15min"
             className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700"
           >
-            Book 15 Minutes Free
+            Start a Project
           </Link>
         </div>
       </header>
@@ -203,31 +291,26 @@ export default function Home() {
               Do your workflows work?
             </h1>
             <p className="mt-6 text-lg leading-8 text-[#374151]">
-              We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what’s slowing you down, and fix it once and for all. That’s our promise.
+              We deliver AI that works and automations that flow, all while you keep using the tools you know and love. Cut through the noise, expose what's slowing you down, and fix it once and for all. That's our promise.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 href="https://calendly.com/xray/15min"
                 className="rounded-full bg-[#111827] px-6 py-3 text-sm font-semibold text-white hover:bg-[#000]"
               >
-                Talk With Us
+                Start a Project
               </Link>
               <Link
-                href="https://quiz.xray.tech/?ref=xraytech&section=hero"
+                href="/work"
                 className="rounded-full border border-[#111827] px-6 py-3 text-sm font-semibold text-[#111827] hover:bg-[#111827] hover:text-white"
               >
-                Free Workflow Assessment
+                View our work
               </Link>
             </div>
           </div>
         </div>
         <div className="pointer-events-none absolute right-0 top-10 hidden lg:block">
-          <Image
-            src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d6966aa508f9e1d57e05b_chat.svg"
-            alt=""
-            width={320}
-            height={320}
-          />
+          <AnimatedIllustration />
         </div>
       </section>
 
@@ -240,16 +323,24 @@ export default function Home() {
                 Obsessed with outcomes, not apps
               </h2>
               <p className="mt-4 max-w-xl text-lg text-[#374151]">
-                We’re experts in best-in-class AI and automation tools serving small and enterprise teams alike. We adopt and stress test emerging tools to keep you on the cutting edge, helping you win the next decade.
+                We're experts in best-in-class AI and automation tools serving small and enterprise teams alike. We adopt and stress test emerging tools to keep you on the cutting edge, helping you win the next decade.
               </p>
 
-              <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2">
+              <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 {stats.map((stat) => (
                   <div key={stat.label} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
                     <div className="text-xl font-bold text-[#111827]">{stat.value}</div>
                     <div className="mt-1 text-xs text-[#374151]">{stat.label}</div>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-8 opacity-70 grayscale">
+                <div className="text-sm font-semibold text-gray-500">Microsoft</div>
+                <div className="text-sm font-semibold text-gray-500">Google</div>
+                <div className="text-sm font-semibold text-gray-500">Salesforce</div>
+                <div className="text-sm font-semibold text-gray-500">Slack</div>
+                <div className="text-sm font-semibold text-gray-500">OpenAI</div>
               </div>
             </div>
 
@@ -337,6 +428,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Transparency */}
+      <section className="bg-[#FAF9F6] py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-semibold tracking-tight">
+            We're transparent with everything; it's in the name.
+          </h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-[#374151]">
+            No hidden fees, no vague timelines. We believe in clear communication and full visibility into every step of your workflow transformation.
+          </p>
+          <AnimatedTransparencyGraphic />
+        </div>
+      </section>
+
       {/* Process Pillars */}
       <section className="bg-[#111827] py-20 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -346,9 +450,10 @@ export default function Home() {
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((pillar, idx) => (
-              <div key={pillar.title} className="rounded-2xl bg-white/5 p-6">
-                <div className="text-lg font-semibold">{pillar.title}</div>
+            {pillars.map((pillar) => (
+              <div key={pillar.title} className="rounded-2xl bg-white/5 p-6 text-center">
+                <div className="flex justify-center text-blue-400">{pillar.icon}</div>
+                <div className="mt-4 text-lg font-semibold">{pillar.title}</div>
                 <p className="mt-3 text-sm leading-6 text-gray-300">{pillar.description}</p>
               </div>
             ))}
@@ -361,7 +466,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-3xl font-semibold tracking-tight text-center">Two Models, One Mission: Your Time.</h2>
           <p className="mt-4 text-center text-lg text-[#374151]">
-            Whether you’re an entrepreneur or an enterprise-scale team, we can help you streamline your work with transparent hourly and monthly packages.
+            Whether you're an entrepreneur or an enterprise-scale team, we can help you streamline your work with transparent hourly and monthly packages.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -429,9 +534,9 @@ export default function Home() {
       {/* Workshops */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-semibold tracking-tight">Workshops</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">XRAY Workshops</h2>
           <p className="mt-4 max-w-3xl text-lg text-[#374151]">
-            Intensive Workflow Education on AI & Automation. In-person and remote workshops designed to teach your team how to work in the future. Our workshops are empowering, fun, practical, and will change how your team will work forever.
+            Intensive Workflow Education on AI & Automation. In-person and remote workshops designed to teach your team how to work in the future.
           </p>
           <p className="mt-4 text-[#374151]">
             Want something custom? We can do that. Let's talk about your team, tooling, and timing.
@@ -450,10 +555,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-3xl font-semibold tracking-tight">Our Products</h2>
           <p className="mt-4 max-w-3xl text-lg text-[#374151]">
-            Solved Workflows, Productized for You. We’ve made these products for ourselves, hundreds of clients, and every builder on the internet, so we mean it when we say our products work.
+            Solved Workflows, Productized for You. We've made these products for ourselves, hundreds of clients, and every builder on the internet.
           </p>
-          <p className="mt-2 text-[#374151]">Want to try them out for yourself?</p>
-          <p className="font-semibold text-[#111827]">Take a look at our tasting menu:</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {products.map((product) => (
@@ -531,23 +634,23 @@ export default function Home() {
             href="https://calendly.com/xray/15min"
             className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#111827] hover:bg-gray-100"
           >
-            Book 15 Minutes Free
+            Book a Demo
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white py-16">
+      <footer className="bg-[#020617] py-16 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h3 className="text-2xl font-semibold tracking-tight">Your workflow, but smarter.</h3>
           <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h4 className="text-sm font-semibold text-[#111827]">{group.title}</h4>
+                <h4 className="text-sm font-semibold text-white">{group.title}</h4>
                 <ul className="mt-4 space-y-2">
                   {group.links.map((link) => (
                     <li key={link}>
-                      <Link href="#" className="text-sm text-gray-600 hover:text-blue-700">
+                      <Link href="#" className="text-sm text-gray-400 hover:text-white">
                         {link}
                       </Link>
                     </li>
@@ -557,36 +660,26 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl bg-gray-50 p-8">
-            <h4 className="text-lg font-semibold">
-              Hear from the humans at XRAY and learn how to get AI and automation working in your workflows.
-            </h4>
-            <form className="mt-4 flex flex-col gap-3 sm:flex-row" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                required
-                placeholder="Your email address"
-                className="flex-1 rounded-full border border-gray-300 px-4 py-2.5 text-sm"
-              />
-              <button
-                type="submit"
-                className="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-blue-700"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 pt-8">
-            <p className="text-sm text-gray-500">© XRAY Tech, Inc. 2026 - Established 2020</p>
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-gray-800 pt-8">
             <div className="flex gap-4">
-              <Link href="https://www.linkedin.com" className="text-sm text-gray-600 hover:text-blue-700">
+              <Link href="https://www.linkedin.com" className="text-sm text-gray-400 hover:text-white">
                 LinkedIn
               </Link>
-              <Link href="https://www.youtube.com" className="text-sm text-gray-600 hover:text-red-700">
+              <Link href="https://www.youtube.com" className="text-sm text-gray-400 hover:text-white">
                 YouTube
               </Link>
             </div>
+            <p className="text-sm text-gray-500">© XRAY Tech, Inc. 2026 - Established 2020</p>
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <Image
+              src="https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d47a84219730184ac7c38_8abab9dfedcf83e42da65280c8fdb4d1_logo-xray.svg"
+              alt="XRAY"
+              width={200}
+              height={60}
+              className="opacity-80"
+            />
           </div>
         </div>
       </footer>
