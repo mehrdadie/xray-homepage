@@ -420,7 +420,9 @@ export default function Home() {
       {/* Process Pillars */}
       <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white">Our Process Pillars</h2>
+          <h2 className="font-display text-[40px] leading-[48px] tracking-[-1px] font-bold text-white">
+            Our Process Pillars
+          </h2>
           <p className="mt-4 max-w-2xl font-body text-lg text-gray-300">
             At XRAY, we're driven by a core set of principles that guide everything we do:
           </p>
@@ -429,7 +431,7 @@ export default function Home() {
             {pillars.map((pillar) => (
               <div key={pillar.title} className="rounded-2xl bg-white/5 p-6 text-center">
                 <div className="flex justify-center text-action">{pillar.icon}</div>
-                <div className="mt-4 font-display text-lg font-semibold text-white">{pillar.title}</div>
+                <div className="mt-4 font-display text-[24px] leading-[32px] tracking-[-0.5px] font-bold text-white">{pillar.title}</div>
                 <p className="mt-3 font-body text-sm leading-6 text-gray-300">{pillar.description}</p>
               </div>
             ))}
@@ -440,7 +442,7 @@ export default function Home() {
       {/* Two Models */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-center text-navy">Two Models, One Mission: Your Time.</h2>
+          <h2 className="font-display text-[40px] leading-[48px] tracking-[-1px] font-bold text-center text-navy">Two Models, One Mission: Your Time.</h2>
           <p className="mt-4 font-body text-center text-lg text-slate">
             Whether you're an entrepreneur or an enterprise-scale team, we can help you streamline your work with transparent hourly and monthly packages.
           </p>
@@ -463,7 +465,7 @@ export default function Home() {
                   <li><strong className="text-navy">The client portal</strong> has a repository of all your past calls and corresponding transcripts for you to review, download, and keep forever if you'd like. Schedule more time whenever is convenient for you, and bring anyone on your team to the sessions.</li>
                 </ul>
               </div>
-              <div className="mt-6 font-display text-3xl font-bold text-navy">
+              <div className="mt-6 font-display text-[40px] leading-[48px] tracking-[-1px] font-bold text-navy">
                 $250<span className="font-body text-lg font-medium text-slate">/hr</span>
               </div>
               <Link
@@ -491,7 +493,7 @@ export default function Home() {
                   <li><strong className="text-navy">Enterprise tooling</strong> for monitoring and meeting summaries.</li>
                 </ul>
               </div>
-              <div className="mt-6 font-display text-3xl font-bold text-navy">
+              <div className="mt-6 font-display text-[40px] leading-[48px] tracking-[-1px] font-bold text-navy">
                 $15,000<span className="font-body text-lg font-medium text-slate">/mo</span>
               </div>
               <Link
@@ -554,7 +556,9 @@ export default function Home() {
       {/* Bottom CTA */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy">Ready to transform your everyday?</h2>
+          <h2 className="font-display text-[56px] leading-[64px] tracking-[-1px] font-bold text-navy text-center">
+            Ready to transform your everyday?
+          </h2>
           <p className="mt-4 font-body max-w-2xl mx-auto text-lg text-slate">
             Schedule a free consultation to discover how we can transform your business processes.
           </p>
