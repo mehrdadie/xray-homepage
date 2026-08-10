@@ -13,10 +13,10 @@ const navLinks = [
 ];
 
 const stats = [
-  { value: "150,000+", label: "Hours Saved" },
-  { value: "300+", label: "Projects" },
-  { value: "30+", label: "Integrations" },
-  { value: "20+", label: "Tools" },
+  { value: "100,000+", label: "Hours Saved" },
+  { value: "500+", label: "Projects" },
+  { value: "100+", label: "Integrations" },
+  { value: "99%", label: "Satisfaction" },
 ];
 
 const testimonials = [
@@ -112,28 +112,49 @@ const pillars = [
 
 const products = [
   {
-    title: "Manage and maintain no-code/low-code automations.",
-    link: "https://guardian.xray.tech/",
-    linkLabel: "Explore XR GUARDIAN",
-    image: "https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d63d0a4b1ffe13a8c7627_product-1.svg",
+    title: "Automation Platform",
+    description: "Build and manage no-code/low-code automations.",
+    icon: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-full h-32">
+        <rect x="12" y="8" width="40" height="28" rx="4" stroke="currentColor" strokeWidth="2" />
+        <path d="M20 20h8M20 26h16" stroke="currentColor" strokeWidth="2" />
+        <circle cx="44" cy="44" r="12" stroke="currentColor" strokeWidth="2" />
+        <path d="M44 38v12M38 44h12" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
   },
   {
-    title: "Plan your next build with a free automation search engine",
-    link: "https://search.xray.tech/",
-    linkLabel: "Explore XR SEARCH",
-    image: "https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d63d5533ace8a3305959f_product-2.svg",
+    title: "AI Assistant",
+    description: "Intelligent assistance for your workflows.",
+    icon: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-full h-32">
+        <rect x="16" y="20" width="32" height="24" rx="12" stroke="currentColor" strokeWidth="2" />
+        <circle cx="32" cy="32" r="4" fill="currentColor" />
+        <path d="M24 44h16" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
   },
   {
-    title: "Generate a 60-second debrief from an hour-long meeting.",
-    link: "https://debrief.xray.tech/",
-    linkLabel: "Explore XR DEBRIEF",
-    image: "https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d63d9ad44f49554e0934e_product-3.svg",
+    title: "Documentation",
+    description: "Auto-generated docs and runbooks.",
+    icon: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-full h-32">
+        <rect x="14" y="6" width="36" height="52" rx="4" stroke="currentColor" strokeWidth="2" />
+        <rect x="24" y="16" width="16" height="4" rx="2" fill="#EF4444" />
+        <path d="M22 28h20M22 34h20M22 40h12" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
   },
   {
-    title: "View the full list of tools",
-    link: "/products",
-    linkLabel: "Explore All Tools",
-    image: "https://cdn.prod.website-files.com/618802531368e6e30ac8dfe4/695d63dd990a98d1548cce3a_product-4.svg",
+    title: "Checklist",
+    description: "Track tasks and approvals.",
+    icon: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-full h-32">
+        <rect x="12" y="10" width="40" height="44" rx="4" stroke="currentColor" strokeWidth="2" />
+        <path d="M20 22h24M20 30h24M20 38h24" stroke="currentColor" strokeWidth="2" />
+        <path d="M28 22l4 4 6-6" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
   },
 ];
 
@@ -168,7 +189,7 @@ const blogPosts = [
 ];
 
 const footerLinks = [
-  { title: "Company", links: ["About Us", "Terms & Conditions", "Privacy Policy"] },
+  { title: "Brands", links: ["About Us", "Terms & Conditions", "Privacy Policy"] },
   {
     title: "Products",
     links: ["XRSEARCH", "XR DEBRIEF", "XR GUARDIAN", "XR ONBOARDING", "XR BLOB"],
@@ -278,7 +299,7 @@ export default function Home() {
             href="https://calendly.com/xray/15min"
             className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700"
           >
-            Start a Project
+            Get Started
           </Link>
         </div>
       </header>
@@ -298,13 +319,13 @@ export default function Home() {
                 href="https://calendly.com/xray/15min"
                 className="rounded-full bg-[#111827] px-6 py-3 text-sm font-semibold text-white hover:bg-[#000]"
               >
-                Start a Project
+                Get a demo
               </Link>
               <Link
-                href="/work"
+                href="/pricing"
                 className="rounded-full border border-[#111827] px-6 py-3 text-sm font-semibold text-[#111827] hover:bg-[#111827] hover:text-white"
               >
-                View our work
+                View pricing
               </Link>
             </div>
           </div>
@@ -323,7 +344,7 @@ export default function Home() {
                 Obsessed with outcomes, not apps
               </h2>
               <p className="mt-4 max-w-xl text-lg text-[#374151]">
-                We're experts in best-in-class AI and automation tools serving small and enterprise teams alike. We adopt and stress test emerging tools to keep you on the cutting edge, helping you win the next decade.
+                We're experts in best-in-class AI and automation tools serving small and enterprise teams alike.
               </p>
 
               <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -333,14 +354,6 @@ export default function Home() {
                     <div className="mt-1 text-xs text-[#374151]">{stat.label}</div>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-8 flex flex-wrap items-center gap-8 opacity-70 grayscale">
-                <div className="text-sm font-semibold text-gray-500">Microsoft</div>
-                <div className="text-sm font-semibold text-gray-500">Google</div>
-                <div className="text-sm font-semibold text-gray-500">Salesforce</div>
-                <div className="text-sm font-semibold text-gray-500">Slack</div>
-                <div className="text-sm font-semibold text-gray-500">OpenAI</div>
               </div>
             </div>
 
@@ -432,10 +445,10 @@ export default function Home() {
       <section className="bg-[#FAF9F6] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-semibold tracking-tight">
-            We're transparent with everything; it's in the name.
+            We're transparent with everything. It's in the name.
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-[#374151]">
-            No hidden fees, no vague timelines. We believe in clear communication and full visibility into every step of your workflow transformation.
+            No hidden fees, no vague timelines. Full visibility into every step of your workflow transformation.
           </p>
           <AnimatedTransparencyGraphic />
         </div>
@@ -466,65 +479,57 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-3xl font-semibold tracking-tight text-center">Two Models, One Mission: Your Time.</h2>
           <p className="mt-4 text-center text-lg text-[#374151]">
-            Whether you're an entrepreneur or an enterprise-scale team, we can help you streamline your work with transparent hourly and monthly packages.
+            Whether you're an entrepreneur or an enterprise-scale team, we can help you streamline your work.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* Hourly */}
+            {/* XRAP Weekly/Bi-weekly */}
             <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-200">
-              <div className="text-sm font-semibold text-blue-700">Hourly</div>
-              <h3 className="mt-2 text-2xl font-semibold">
-                <span className="text-[#111827]">XRAY Hourly is a </span>
-                <span className="text-blue-700">Done with You</span>
+              <div className="text-sm font-semibold text-blue-700">XRAP (Weekly or Bi-weekly)</div>
+              <h3 className="mt-2 text-2xl font-semibold text-[#111827]">
+                Flexible engagement for growing teams.
               </h3>
               <p className="mt-4 text-[#374151]">
-                For agile teams, startups, and owner/operators who need expert, hands-on support – right away.
-              </p>
-              <p className="mt-4 text-[#374151]">
-                XRAY Hourly is a <strong>Done with You</strong> model focused on immediate outcomes for maximum efficiency on a tight scope.
+                Ideal for teams that need expert support on a regular cadence without a full-time commitment.
               </p>
               <ul className="mt-6 space-y-3 text-sm text-[#374151]">
-                <li><strong>On-demand Support:</strong> Flexible, hourly, as-needed billing with no long-term commitment.</li>
-                <li><strong>Collaborative Building:</strong> Work side-by-side with a hand-picked expert on a live, recorded Zoom call.</li>
-                <li><strong>Transparent Management:</strong> The client portal has a repository of all your past calls and corresponding transcripts.</li>
+                <li><strong>Weekly or bi-weekly sprints</strong> with dedicated experts.</li>
+                <li><strong>Async support</strong> between sessions via Slack and Loom.</li>
+                <li><strong>Transparent tracking</strong> with shared task boards.</li>
               </ul>
               <div className="mt-6 text-3xl font-bold">
-                $250<span className="text-lg font-medium text-gray-500">/hr</span>
+                $4,500<span className="text-lg font-medium text-gray-500">/mo</span>
               </div>
               <Link
-                href="/xray-hourly"
-                className="mt-4 inline-block rounded-full border border-[#111827] px-5 py-2.5 text-sm font-semibold hover:bg-[#111827] hover:text-white"
+                href="/xray-xrap"
+                className="mt-4 inline-block rounded-full bg-[#111827] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#000]"
               >
-                Learn More About XRAY Hourly
+                Get started
               </Link>
             </div>
 
-            {/* Monthly */}
+            {/* XRAP Membership Full Time */}
             <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-200">
-              <div className="text-sm font-semibold text-blue-700">Monthly</div>
-              <h3 className="mt-2 text-2xl font-semibold">
-                <span className="text-[#111827]">XRAY Monthly is a </span>
-                <span className="text-blue-700">Full Service</span>
+              <div className="text-sm font-semibold text-blue-700">XRAP Membership (Full Time)</div>
+              <h3 className="mt-2 text-2xl font-semibold text-[#111827]">
+                Full-service workflow transformation.
               </h3>
               <p className="mt-4 text-[#374151]">
-                For complex, cross-departmental projects, we offer full service workflow transformation at scale.
-              </p>
-              <p className="mt-4 text-[#374827]">
-                XRAY Monthly is a <strong>Full Service</strong> model where we own the complete workflow design lifecycle: discovery, design, execution, change management, and maintenance.
+                For complex, cross-departmental projects that need a dedicated team and fixed budget.
               </p>
               <ul className="mt-6 space-y-3 text-sm text-[#374151]">
-                <li><strong>Dedicated Team:</strong> A dedicated executive strategist, workflow consultant, and project manager to build anything from your dream automation system to your executive dashboard.</li>
-                <li><strong>Proactive Partnership:</strong> Fixed, monthly billing that includes proactive support at every phase of your project, and quick POCs for all the ideas you come up with along the way.</li>
-                <li><strong>Proprietary Tooling:</strong> Access enterprise-grade workflow management tools, automation error monitoring, actionable meeting summaries, and more.</li>
+                <li><strong>Dedicated team:</strong> Strategist, consultant, and project manager.</li>
+                <li><strong>Proactive support</strong> at every phase with quick POCs.</li>
+                <li><strong>Enterprise tooling</strong> for monitoring and meeting summaries.</li>
               </ul>
               <div className="mt-6 text-3xl font-bold">
-                $15,000<span className="text-lg font-medium text-gray-500">/mo</span>
+                $18,000<span className="text-lg font-medium text-gray-500">/mo</span>
               </div>
               <Link
-                href="/xray-monthly"
-                className="mt-4 inline-block rounded-full border border-[#111827] px-5 py-2.5 text-sm font-semibold hover:bg-[#111827] hover:text-white"
+                href="/xray-xrap-membership"
+                className="mt-4 inline-block rounded-full bg-[#111827] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#000]"
               >
-                Learn More About XRAY Monthly
+                Get started
               </Link>
             </div>
           </div>
@@ -538,14 +543,11 @@ export default function Home() {
           <p className="mt-4 max-w-3xl text-lg text-[#374151]">
             Intensive Workflow Education on AI & Automation. In-person and remote workshops designed to teach your team how to work in the future.
           </p>
-          <p className="mt-4 text-[#374151]">
-            Want something custom? We can do that. Let's talk about your team, tooling, and timing.
-          </p>
           <Link
             href="/xray-workshops"
             className="mt-6 inline-block rounded-full bg-[#111827] px-6 py-3 text-sm font-semibold text-white hover:bg-[#000]"
           >
-            Explore Our Workshops & Workforce Training
+            View all workshop packages.
           </Link>
         </div>
       </section>
@@ -555,26 +557,16 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-3xl font-semibold tracking-tight">Our Products</h2>
           <p className="mt-4 max-w-3xl text-lg text-[#374151]">
-            Solved Workflows, Productized for You. We've made these products for ourselves, hundreds of clients, and every builder on the internet.
+            Solved Workflows, Productized for You.
           </p>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4">
             {products.map((product) => (
-              <Link
-                key={product.linkLabel}
-                href={product.link}
-                className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition hover:shadow-md"
-              >
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  width={400}
-                  height={200}
-                  className="w-full"
-                />
-                <div className="mt-4 font-medium">{product.title}</div>
-                <div className="mt-2 text-sm font-semibold text-blue-700">{product.linkLabel}</div>
-              </Link>
+              <div key={product.title} className="rounded-3xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+                <div className="flex justify-center text-[#111827]">{product.icon}</div>
+                <div className="mt-4 text-sm font-semibold">{product.title}</div>
+                <div className="mt-2 text-xs text-[#374151]">{product.description}</div>
+              </div>
             ))}
           </div>
         </div>
@@ -634,7 +626,7 @@ export default function Home() {
             href="https://calendly.com/xray/15min"
             className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#111827] hover:bg-gray-100"
           >
-            Book a Demo
+            Get started
           </Link>
         </div>
       </section>
@@ -642,7 +634,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#020617] py-16 text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h3 className="text-2xl font-semibold tracking-tight">Your workflow, but smarter.</h3>
+          <h3 className="text-2xl font-semibold tracking-tight">Our work does the talking.</h3>
           <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
             {footerLinks.map((group) => (
               <div key={group.title}>
